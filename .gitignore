@@ -5,3 +5,5 @@ npm-debug.log
 *.sublime-project
 *.sublime-workspace
 .idea
+westpac/assets/js/site.min.js
+westpac/assets/css/site.min.css

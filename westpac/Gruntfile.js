@@ -31,12 +31,12 @@ module.exports = function(grunt) {
 	// Dependencies
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------
 	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-clean');
+	// grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-stylus');
-	grunt.loadNpmTasks('grunt-contrib-copy');
+	// grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-lintspaces');
 	grunt.loadNpmTasks('grunt-grunticon');
 	grunt.loadNpmTasks('grunt-wakeup');
@@ -47,6 +47,86 @@ module.exports = function(grunt) {
 	// Grunt tasks
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------
 	grunt.initConfig({
+
+
+		//----------------------------------------------------------------------------------------------------------------------------------------------------------
+		// STYLUS
+		//----------------------------------------------------------------------------------------------------------------------------------------------------------
+		stylus: {
+			compile: {
+				options: {
+					use: [
+						require('autoprefixer-stylus'),
+					],
+				},
+				files: {
+					'assets/css/site.min.css': 'assets/stylus/site.styl',
+				},
+			},
+		},
+
+
+		//----------------------------------------------------------------------------------------------------------------------------------------------------------
+		// Concat files
+		//----------------------------------------------------------------------------------------------------------------------------------------------------------
+		concat: {
+			compile: {
+				src: [
+					'assets/js/*jquery*.js',
+					'assets/js/site.min.js',
+				],
+				dest: 'assets/js/site.min.js',
+			},
+		},
+
+
+		//----------------------------------------------------------------------------------------------------------------------------------------------------------
+		// UGLIFY
+		//----------------------------------------------------------------------------------------------------------------------------------------------------------
+		uglify: {
+			options: {
+				mangle: false,
+				report: 'gzip',
+			},
+
+			compile: {
+				files: {
+					'assets/js/site.min.js': [
+						'assets/js/**/*.js',
+						'!assets/js/site.min.js',
+						'!assets/js/*jquery*.js',
+						'!assets/js/notes-server/*.js',
+					],
+				},
+			},
+		},
+
+
+		//----------------------------------------------------------------------------------------------------------------------------------------------------------
+		// GRUNTICON
+		//----------------------------------------------------------------------------------------------------------------------------------------------------------
+		grunticon: {
+			compile: {
+				options: {
+					datasvgcss: 'symbols.data.svg.css',
+					datapngcss: 'symbols.data.png.css',
+					urlpngcss: 'symbols.fallback.css',
+					cssprefix: '.sitesymbol-',
+					enhanceSVG: true,
+					customselectors: {
+						'header-bg': ['.header .headerline'],
+					},
+					pngpath: '../img',
+				},
+
+				files: [{
+					expand: true,
+					cwd: 'assets/svg',
+					src: ['*.svg'],
+					dest: 'assets/css',
+				}],
+			},
+		},
 
 
 		//----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -69,13 +149,17 @@ module.exports = function(grunt) {
 					],
 				},
 				src: [
-					'**/*.js',
-					'**/*.less',
-					'**/*.css',
+					'assets/**/*.js',
+					'assets/**/*.styl',
+					'assets/**/*.css',
 					'**/*.html',
 
 					'!node_modules/**/*.*',
 					'!**/*.svg',
+					'!**/*.css',
+					'!**/*reveal*',
+					'!**/*.min.*',
+					'!**/notes-server/*',
 					'!Gruntfile.js',
 				],
 			},
@@ -110,6 +194,43 @@ module.exports = function(grunt) {
 
 
 		//----------------------------------------------------------------------------------------------------------------------------------------------------------
+		// Watch
+		//----------------------------------------------------------------------------------------------------------------------------------------------------------
+		watch: {
+			js: {
+				files: [
+					'assets/js/**/*.js',
+				],
+				tasks: [
+					'_buildJS',
+					'wakeup',
+				],
+			},
+
+			css: {
+				files: [
+					'assets/stylus/**/*.styl',
+					'assets/stylus/**/*.css',
+				],
+				tasks: [
+					'_buildCSS',
+					'wakeup',
+				],
+			},
+
+			svg: {
+				files: [
+					'assets/svg/**/*.svg',
+				],
+				tasks: [
+					'_buildSVG',
+					'wakeup',
+				],
+			},
+		},
+
+
+		//----------------------------------------------------------------------------------------------------------------------------------------------------------
 		// server
 		//----------------------------------------------------------------------------------------------------------------------------------------------------------
 		connect: {
@@ -130,13 +251,27 @@ module.exports = function(grunt) {
 	// Private tasks
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------
 	grunt.registerTask('_build', [
-		'lintspaces',
-		'buildVersions',
-		'wakeup',
+		// 'lintspaces',
+		'stylus',
+		'uglify',
+		'concat',
+		'grunticon',
 	]);
 
-	grunt.registerTask('_ubergrunt', [
-		'buildVersions',
+	grunt.registerTask('_buildJS', [
+		// 'lintspaces',
+		'uglify',
+		'concat',
+	]);
+
+	grunt.registerTask('_buildCSS', [
+		// 'lintspaces',
+		'stylus',
+	]);
+
+	grunt.registerTask('_buildSVG', [
+		// 'lintspaces',
+		'grunticon',
 	]);
 
 
@@ -147,7 +282,8 @@ module.exports = function(grunt) {
 		'font',
 		'_build',
 		'connect',
-		'watchVersions',
+		'wakeup',
+		'watch',
 	]);
 
 };
