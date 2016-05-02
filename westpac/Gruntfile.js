@@ -200,6 +200,7 @@ module.exports = function(grunt) {
 			js: {
 				files: [
 					'assets/js/**/*.js',
+					'!assets/js/site.min.js',
 				],
 				tasks: [
 					'_buildJS',
@@ -211,6 +212,7 @@ module.exports = function(grunt) {
 				files: [
 					'assets/stylus/**/*.styl',
 					'assets/stylus/**/*.css',
+					'assets/stylus/**/site.min.css',
 				],
 				tasks: [
 					'_buildCSS',
