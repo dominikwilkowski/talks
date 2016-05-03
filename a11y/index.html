@@ -15,6 +15,9 @@
 	<div class="reveal">
 		<div class="slides">
 
+			<!-- *****************************************************************************************************************************************************
+			*  INTRO
+			****************************************************************************************************************************************************** -->
 			<section id="headline">
 				<h1 class="slide-headline slide-headline-small">
 					My favourite a<span class="numbers">11</span>Y things<br>
@@ -31,6 +34,9 @@
 			</section>
 
 
+			<!-- *****************************************************************************************************************************************************
+			*  CONTENT
+			****************************************************************************************************************************************************** -->
 			<section id="content">
 				<h2 class="slide-headline slide-headline-small">Content</h2>
 
@@ -42,39 +48,43 @@
 						<a href="#slowinternet">Slow internet</a>
 					</li>
 					<li>
-						<a href="#notjustblind">Slow device</a>
+						<a href="#slowdevice">Slow device</a>
 					</li>
 					<li>
-						<a href="#notjustblind">Data cap</a>
+						<a href="#datacap">Data cap</a>
 					</li>
 					<li>
-						<a href="#notjustblind">Add blockers and privacy</a>
+						<a href="#adblockersprivacy">Add blockers and privacy</a>
 					</li>
 					<li>
-						<a href="#notjustblind">API</a>
+						<a href="#api">API</a>
 					</li>
 					<li>
-						<a href="#notjustblind">Documentation</a>
+						<a href="#documentation">Documentation</a>
 					</li>
 					<li>
-						<a href="#notjustblind">Language</a>
+						<a href="#tabsspaces">Tabs vs Spaces</a>
 					</li>
 					<li>
-						<a href="#notjustblind">Tabs vs Spaces</a>
+						<a href="#codingstyleguide">Coding styleguides</a>
 					</li>
 					<li>
-						<a href="#notjustblind">Coding styleguides</a>
+						<a href="#customerinteractions">Costumer communication</a>
 					</li>
 					<li>
-						<a href="#notjustblind">Costumer communication</a>
-					</li>
-					<li>
-						<a href="#notjustblind">Open source</a>
+						<a href="#opensource">Open source</a>
 					</li>
 				</ul>
+
+				<aside class="notes">
+					Stuff we cover
+				</aside>
 			</section>
 
 
+			<!-- *****************************************************************************************************************************************************
+			*  MORE THAN SCREENREADERS
+			****************************************************************************************************************************************************** -->
 			<section id="morethanscreenreaders">
 				<section>
 					<h2 class="slide-headline slide-headline-small">More than screenreaders</h2>
@@ -99,6 +109,11 @@
 							Many more &hellip;
 						</li>
 					</ul>
+
+					<aside class="notes">
+						There are many more shades to accessibility other than just making your application accessible to screenreaders.
+						Though please do make them accessible to screenreaders :)
+					</aside>
 				</section>
 
 				<section>
@@ -106,7 +121,7 @@
 						"Slow Keys"
 					</h3>
 
-					<img src="assets/img/typing.gif" alt="hands typing with unpredictable motions">
+					<img src="assets/img/typing.gif" alt="An animation of hands typing with unpredictable motions">
 
 					<aside class="notes">
 						A keystroke is only registered after it was held for a certain period of time. Helps people with motor impairments with unpredictable motions.
@@ -141,7 +156,8 @@
 						Parallax can cause vertigo / motion sickness
 					</h3>
 
-					<img src="assets/img/parallax.gif" alt="A website being scrolled with the background scrolling at different speed resulting in a lot of motion">
+					<img src="assets/img/parallax.gif" alt="An animation of a website being scrolled with the background scrolling at different speed resulting in a
+					lot of motion">
 
 					<aside class="notes">
 						It's also ennoying to get your scroll hijacked.
@@ -153,6 +169,8 @@
 						Outlines
 					</h3>
 
+					<img src="assets/img/outline.gif" alt="An animation of the gov.uk website tab order with pretty colored outlines">
+
 					<aside class="notes">
 						Don't remove. Just hide with JS and add when tab is first pressed.
 					</aside>
@@ -162,6 +180,9 @@
 					<h3 class="slide-headline slide-headline-small">
 						Color AND shape
 					</h3>
+
+					<img src="assets/img/color-shape.jpg" alt="A screenshot of a table of features of polyfill.io showing numbers not just different colors but also
+					different borders">
 
 					<aside class="notes">
 						Make distinctions with both. E.g. Links.
@@ -173,6 +194,19 @@
 						SVG accessibility
 					</h3>
 
+<pre><code data-trim data-noescape class="HTML">
+&lt;svg aria-labelledby="title-download"&gt;
+	&lt;title id="title-download" lang="en"&gt;Download symbol&lt;/title&gt;
+	&lt;path class="icons-background" d="M27.8 etc&hellip;"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+</code></pre>
+
+<pre><code data-trim data-noescape class="HTML">
+&lt;svg role="img" title="Download symbol"&gt;
+	&lt;use xlink:href="sprite.svg#download"/&gt;
+&lt;/svg&gt;
+</code></pre>
+
 					<aside class="notes">
 						In a sprite use the title attribute and tie it to the SVG via aria-describedby
 					</aside>
@@ -180,9 +214,754 @@
 			</section>
 
 
+			<!-- *****************************************************************************************************************************************************
+			*  SLOW INTERNET
+			****************************************************************************************************************************************************** -->
 			<section id="slowinternet">
 				<section>
 					<h3 class="slide-headline slide-headline-small">Slow internet</h3>
+
+					<ul class="linklist">
+						<li class="fragment fade-up">
+							Remote areas in Australia<br>
+							<small>(Almost everywhere in Oz really)</small>
+						</li>
+						<li class="fragment fade-up">
+							Remote areas not in Australia<br>
+							<small>(Almost everywhere else really)</small>
+						</li>
+						<li class="fragment fade-up">
+							Train / Bus in tunnel
+						</li>
+						<li class="fragment fade-up">
+							Old contract only includes EDGE connection
+						</li>
+						<li class="fragment fade-up">
+							Student in a library
+						</li>
+						<li class="fragment fade-up">
+							Public wifi
+						</li>
+					</ul>
+
+					<aside class="notes">
+						Slow internet is common and very much an accessibility issue.
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						User feedback on loading
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						Offline first
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						Local storage
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						keep things separated (style and content)
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						http/2 and http request limits (critical CSS inline?)
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  SLOW DEVICE
+			****************************************************************************************************************************************************** -->
+			<section id="slowdevice">
+				<section>
+					<h3 class="slide-headline slide-headline-small">Slow device</h3>
+
+					<ul class="linklist">
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+					</ul>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						Use CSS for animations and fancy effects (degrade to just show and hide in older devices)
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						Test your performance (60fps, #perfmatters)
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  DATA CAP
+			****************************************************************************************************************************************************** -->
+			<section id="datacap">
+				<section>
+					<h3 class="slide-headline slide-headline-small">Data cap</h3>
+
+					<ul class="linklist">
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+					</ul>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						Be mindful of the data you send
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						No webfonts for mobile (two font stacks)?
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						Make use of the browser cache (don't compile for each page)
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  AD BLOCKERS AND PRIVACY
+			****************************************************************************************************************************************************** -->
+			<section id="adblockersprivacy">
+				<section>
+					<h3 class="slide-headline slide-headline-small">Ad blockers and privacy</h3>
+
+					<ul class="linklist">
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+					</ul>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						false positive -> no-js
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						Don't use icon fonts
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						HTTPS and letsencrypt
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						test your cert with ssllabs.com for common security flaws
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  API
+			****************************************************************************************************************************************************** -->
+			<section id="api">
+				<section>
+					<h3 class="slide-headline slide-headline-small">API</h3>
+
+					<ul class="linklist">
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+					</ul>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						there are other things out there than REST
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						format (JSON > XML > plain text?)
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						usable from browser? why?
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						status page for up-times and issue tracking
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						test(human and unit tests) your endpoints, constantly
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						scale! before you need to
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						document and publish examples
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  DOCUMENTATION
+			****************************************************************************************************************************************************** -->
+			<section id="documentation">
+				<section>
+					<h3 class="slide-headline slide-headline-small">Documentation</h3>
+
+					<ul class="linklist">
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+					</ul>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						communicate to humans (be visual)
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						make your docs accessible (duh!)
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						provide searches
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						give ways out for frustrated stuck users
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						code examples
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						more than one way (videos, docs, playgrounds)
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  TABS VS SPACES
+			****************************************************************************************************************************************************** -->
+			<section id="tabsspaces">
+				<section>
+					<h3 class="slide-headline slide-headline-small">Tabs vs spaces</h3>
+
+					<ul class="linklist">
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+					</ul>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						tabs for indentation, spaces for alignment (hate me now!)
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  CODING STYLEGUIDE
+			****************************************************************************************************************************************************** -->
+			<section id="codingstyleguide">
+				<section>
+					<h3 class="slide-headline slide-headline-small">Coding Styleguide</h3>
+
+					<ul class="linklist">
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+					</ul>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						for on-boarding and the rogue bus hitting your engineers
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  CUSTOMER INTERACTIONS
+			****************************************************************************************************************************************************** -->
+			<section id="customerinteractions">
+				<section>
+					<h3 class="slide-headline slide-headline-small">Customer interactions</h3>
+
+					<ul class="linklist">
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+					</ul>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						communicate failures and be open about it (apologise)
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						communicate changes and challenges
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						take pride
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						get excited (it's infectious)
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  FACILITATE OPEN SOURCE PRS
+			****************************************************************************************************************************************************** -->
+			<section id="opensource">
+				<section>
+					<h3 class="slide-headline slide-headline-small">Facilitate open source PRs</h3>
+
+					<ul class="linklist">
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+						<li class="fragment fade-up">
+							xxx
+						</li>
+					</ul>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						documentations&hellip;
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						community guidelines
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						github templates
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						take critisism on board but don't be afraid to take a stance
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						give reasons why some PR might not be expected
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						ask for opinions (proposals)
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						enforce those styleguides
+					</h3>
+
+					<aside class="notes">
+						xxx
+					</aside>
 				</section>
 			</section>
 		</div>
