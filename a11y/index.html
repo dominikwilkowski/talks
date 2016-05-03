@@ -20,17 +20,13 @@
 					My favourite a<span class="numbers">11</span>Y things<br>
 					<small>Or why a<span class="numbers">11</span>y doesn’t stop with screen readers</small>
 				</h1>
-			</section>
 
-
-			<section id="introduction">
-				<h2 class="slide-headline"><em>Hi</em>, <small>I'm Dominik</small></h2>
-
+				<h2 class="slide-subline buffer">By Dominik</h2>
 				<ul class="slide-list">
-					<li><a class="main-link" href="//twitter.com/wilkowskidom">@wilkowskidom</a></li>
+					<li><a href="//twitter.com/wilkowskidom">@wilkowskidom</a></li>
 					<li>UI principle lead</li>
-					<li>Westpac</li>
-					<li>The Working Party</li>
+					<li><a href="https://gel.westpacgroup.com.au">Westpac</a></li>
+					<li><a href="http://theworkingparty.com.au">The Working Party</a></li>
 				</ul>
 			</section>
 
@@ -40,10 +36,10 @@
 
 				<ol class="linklist">
 					<li>
-						<a href="#beyondblind">Beyond blindness</a>
+						<a href="#morethanscreenreaders">More than screenreaders</a>
 					</li>
 					<li>
-						<a href="#notjustblind">Slow internet</a>
+						<a href="#slowinternet">Slow internet</a>
 					</li>
 					<li>
 						<a href="#notjustblind">Slow device</a>
@@ -79,64 +75,114 @@
 			</section>
 
 
-			<section id="beyondblind">
+			<section id="morethanscreenreaders">
 				<section>
-					<h2 class="slide-headline slide-headline-small">Beyond blindness</h2>
+					<h2 class="slide-headline slide-headline-small">More than screenreaders</h2>
 
 					<ul class="linklist">
 						<li class="fragment fade-up">
-							<p>Blind</p>
+							Blindness
 						</li>
 						<li class="fragment fade-up">
-							<p>Colour blind</p>
+							Colour blindness
 						</li>
 						<li class="fragment fade-up">
-							<p>Cognitive impairement</p>
+							Cognitive impairements
 						</li>
 						<li class="fragment fade-up">
-							<p>Physically impairement</p>
+							Motion and hearing impairements
+						</li>
+						<li class="fragment fade-up">
+							Vestibular disorders
+						</li>
+						<li class="fragment fade-up">
+							Many more &hellip;
 						</li>
 					</ul>
 				</section>
 
 				<section>
-					<h3 class="slide-headline slide-headline-small">Semantic HTML</h3>
+					<h3 class="slide-headline slide-headline-small">
+						"Slow Keys"
+					</h3>
+
+					<img src="assets/img/typing.gif" alt="hands typing with unpredictable motions">
+
+					<aside class="notes">
+						A keystroke is only registered after it was held for a certain period of time. Helps people with motor impairments with unpredictable motions.
+					</aside>
 				</section>
 
 				<section>
-					<h3 class="slide-headline slide-headline-small">Trap keyboard focus (and don’t trap)</h3>
+					<h3 class="slide-headline slide-headline-small">
+						Please don't disable the zoom
+					</h3>
+
+<pre><code data-trim data-noescape class="javascript">
+&lt;meta name="viewport" content="
+	width=device-width,
+	initial-scale=1,
+	<del>maximum-scale=1,</del>
+	<del>user-scalable=no</del>
+"&gt;
+</code></pre>
+
+<pre><code data-trim data-noescape class="CSS">
+@-ms-viewport { width: device-width;<del> zoom:1.0;</del> }
+</code></pre>
+
+					<aside class="notes">
+						That's just mean! I got glasses and I'd appreciate it if I could zoom in please. <strong>WCAG 1.4.4</strong>
+					</aside>
 				</section>
 
 				<section>
-					<h3 class="slide-headline slide-headline-small">Disable zoom (no!)</h3>
+					<h3 class="slide-headline slide-headline-small">
+						Parallax can cause vertigo / motion sickness
+					</h3>
+
+					<img src="assets/img/parallax.gif" alt="A website being scrolled with the background scrolling at different speed resulting in a lot of motion">
+
+					<aside class="notes">
+						It's also ennoying to get your scroll hijacked.
+					</aside>
 				</section>
 
 				<section>
-					<h3 class="slide-headline slide-headline-small">Skip links (not just on the page top)</h3>
+					<h3 class="slide-headline slide-headline-small">
+						Outlines
+					</h3>
+
+					<aside class="notes">
+						Don't remove. Just hide with JS and add when tab is first pressed.
+					</aside>
 				</section>
 
 				<section>
-					<h3 class="slide-headline slide-headline-small">Outlines</h3>
+					<h3 class="slide-headline slide-headline-small">
+						Color AND shape
+					</h3>
+
+					<aside class="notes">
+						Make distinctions with both. E.g. Links.
+					</aside>
 				</section>
 
 				<section>
-					<h3 class="slide-headline slide-headline-small">hight contrast</h3>
-				</section>
+					<h3 class="slide-headline slide-headline-small">
+						SVG accessibility
+					</h3>
 
-				<section>
-					<h3 class="slide-headline slide-headline-small">color AND shape</h3>
+					<aside class="notes">
+						In a sprite use the title attribute and tie it to the SVG via aria-describedby
+					</aside>
 				</section>
+			</section>
 
-				<section>
-					<h3 class="slide-headline slide-headline-small">consistency</h3>
-				</section>
 
+			<section id="slowinternet">
 				<section>
-					<h3 class="slide-headline slide-headline-small">svg title and aria-describedby (ID duplication) and where to use it (sprites or direct embedded)</h3>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">content accessibility ("read more")</h3>
+					<h3 class="slide-headline slide-headline-small">Slow internet</h3>
 				</section>
 			</section>
 		</div>
