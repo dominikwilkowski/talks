@@ -43,8 +43,11 @@
 			&:after
 				content ','
 
-			&:last-child:after
-				content ''
+			&:last-child
+				margin-right 0
+
+				&:after
+					content ''
 
 	.linklist
 		display block
@@ -54,6 +57,9 @@
 
 		li
 			margin 12px 0
+
+			&:last-child
+				margin-right 0
 
 	a
 		font-family goudy-italic
