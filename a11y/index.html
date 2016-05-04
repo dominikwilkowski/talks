@@ -74,7 +74,7 @@
 					<li>
 						<a href="#opensource">Open source</a>
 					</li>
-				</ul>
+				</ol>
 
 				<aside class="notes">
 					Stuff we cover
@@ -256,6 +256,10 @@
 
 					<ul class="exchange-list">
 						<li>
+							<img class="fragment fade-out" data-fragment-index="1" src="assets/img/feedback5.gif" alt="An animation of an offline warning message popping up
+							from the top and reconnecting with a spinner">
+						</li>
+						<li class="fragment fade-in" data-fragment-index="1">
 							<img class="fragment fade-out" data-fragment-index="2" src="assets/img/feedback1.jpg" alt="A screenshot of Trellos offline message showing two
 							red boxes with explanation and way forward">
 						</li>
@@ -275,7 +279,8 @@
 						Good feedback is important so users know what's going on. This nice
 						<a href="https://www.smashingmagazine.com/2015/04/its-alive-apps-that-feed-back-accessibly/">article at smashing magazine</a> describes how to make
 						your messages accessible. You have a maximum of 10 sec of your users attention according to this
-						<a href="https://www.nngroup.com/articles/response-times-3-important-limits/">Nielsen article</a>, fill it
+						<a href="https://www.nngroup.com/articles/response-times-3-important-limits/">Nielsen article</a>, fill it with usefull feedback and give up at
+						some point. Add fallbacks to your nodejs app with a nginx proxy and an error page.
 					</aside>
 				</section>
 
@@ -284,28 +289,59 @@
 						Offline first
 					</h3>
 
+					<ul class="linklist">
+						<li class="fragment fade-in">
+							<h4>
+								W3C Specifications<br>
+								<small><a href="https://github.com/pazguille/offline-first">(awesome GitHub repo)</a></small>
+							</h4>
+
+							<ul class="linklist">
+								<li>
+									<a href="http://www.w3.org/TR/offline-webapps/">Offline Web Applications <small>caching, events, localStorage</small></a>
+								</li>
+								<li>
+									<a href="http://www.w3.org/TR/service-workers/">Service Workers</a>
+								</li>
+								<li>
+									<a href="http://www.w3.org/TR/IndexedDB/">IndexedDB</a>
+								</li>
+								<li>
+									<a href="http://www.w3.org/TR/webstorage/">WebStorage</a>
+								</li>
+							</ul>
+						</li>
+						<li class="fragment fade-in">
+							<h4><a href="http://alistapart.com/article/offline-first">A LIST APART article</a></h4>
+
+							<ul class="linklist">
+								<li class="fragment fade-in">Remain functional and store locally, add to a queue</li>
+								<li class="fragment fade-in">Offline is not an error.</li>
+								<li class="fragment fade-in">Commuicate a possible risk of something being out of sync</li>
+							</ul>
+						</li>
+					</ul>
+
 					<aside class="notes">
-						xxx
+						Build your app offline first. Have a look at this repo about all <a href="https://github.com/offlinefirst">things offline first</a>.
+						There is a fantastic repo for more docs under: <a href="https://github.com/pazguille/offline-first">https://github.com/pazguille/offline-first</a>.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						Local storage
+						Separation of concerns
 					</h3>
 
-					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						keep things separated (style and content)
-					</h3>
+					<ul class="linklist">
+						<li class="fragment fade-in">Keep style and content separated</li>
+						<li class="fragment fade-in">HTML (no CSS) is the best fallback</li>
+						<li class="fragment fade-in">Progressive enhancements</li>
+					</ul>
 
 					<aside class="notes">
-						xxx
+						When building your SPA or website make sure you devide and conquer. When HTML is loaded it should be functional and readable. HTML is your best
+						fallback.
 					</aside>
 				</section>
 
