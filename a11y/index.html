@@ -369,7 +369,7 @@
 					<ul class="linklist">
 						<li class="fragment fade-in">No more http request counting</li>
 						<li class="fragment fade-in">Modularize all the things</li>
-						<li class="fragment fade-in">Inlining critical CSS = Anit Pattern</li>
+						<li class="fragment fade-in">Inlining critical CSS = Anti Pattern</li>
 					</ul>
 
 					<aside class="notes">
@@ -386,29 +386,12 @@
 				<section>
 					<h3 class="slide-headline slide-headline-small">Slow device</h3>
 
-					<ul class="linklist">
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-					</ul>
+					<img src="assets/img/fragmentation.jpg" alt="A screenshot of the current fragmentation among Android as of August 2015 showing hundreds of
+					differently sized versions in differing quanity">
 
 					<aside class="notes">
-						xxx
+						http://opensignal.com/reports/2015/08/android-fragmentation/ and http://www.nateberkopec.com/2015/10/07/frontend-performance-chrome-timeline.html
+						are great resources.
 					</aside>
 				</section>
 
@@ -418,17 +401,19 @@
 					</h3>
 
 					<aside class="notes">
-						xxx
+						The assumption here is that older devices also have older browsers. That’s not always true.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						Test your performance (60fps, #perfmatters)
+						Test your performance<br>
+						(60fps, #perfmatters)
 					</h3>
 
 					<aside class="notes">
-						xxx
+						At I/O 2016 the inspector got some love including a PR to the node project so you can use the Chrome inspector ti inspect and profile your
+						node code.
 					</aside>
 				</section>
 			</section>
@@ -443,27 +428,18 @@
 
 					<ul class="linklist">
 						<li class="fragment fade-up">
-							xxx
+							Might be locked into an old contract
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							Might live in a country that only offeres data-caped contracts
 						</li>
 						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
+							Might not be as well payed as you are
 						</li>
 					</ul>
 
 					<aside class="notes">
-						xxx
+						There are many users that have to budget their data.
 					</aside>
 				</section>
 
@@ -472,28 +448,52 @@
 						Be mindful of the data you send
 					</h3>
 
+					<ul class="linklist">
+						<li class="fragment fade-up">
+							Optimize images
+						</li>
+						<li class="fragment fade-up">
+							Use responsive images (picture element, srcset)
+						</li>
+						<li class="fragment fade-up">
+							Minify files (HTML too)
+						</li>
+						<li class="fragment fade-up">
+							gzip
+						</li>
+					</ul>
+
 					<aside class="notes">
-						xxx
+						Optimizing your images including svgs can save you a lot of space.
+
+						Do you need to send the retina version of an image to everyone? Use the picture element or srcset which falls back to inner img in older browsers.
+						There is also a polyfill: http://scottjehl.github.io/picturefill/
+
+						Minify all the things. Not much will be saved here but every bit helps.
+
+						gziping is considered best practise although there are some recent security issues with the compression.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						No webfonts for mobile (two font stacks)?
+						No webfonts for mobile<br>
+						(two font stacks)?
 					</h3>
 
 					<aside class="notes">
-						xxx
+						Having two webfont stacks for different breakpoints can help reduce the load on mobile. We assume this is where you are caped.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						Make use of the browser cache (don't compile for each page)
+						Make use of the browser cache<br>
+						(don't compile for each page)
 					</h3>
 
 					<aside class="notes">
-						xxx
+						Using the cache means working WITH the browser and not reinventing it inside.
 					</aside>
 				</section>
 			</section>
@@ -508,37 +508,26 @@
 
 					<ul class="linklist">
 						<li class="fragment fade-up">
-							xxx
+							Ad blockers are the new hip way to rebell against the MAN
 						</li>
 						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
+							There are also some valid security concers
 						</li>
 					</ul>
 
 					<aside class="notes">
-						xxx
+						Do you tell your users what plugins you use of third party services?
+						Do you know what all those services actually track?
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						false positive -> no-js
+						False positive -> no-js
 					</h3>
 
 					<aside class="notes">
-						xxx
+						False positives happen. Now your js is blocked. Does your website work still?
 					</aside>
 				</section>
 
@@ -548,7 +537,7 @@
 					</h3>
 
 					<aside class="notes">
-						xxx
+						Font's are among the first things to be blocked to save data.
 					</aside>
 				</section>
 
@@ -558,17 +547,18 @@
 					</h3>
 
 					<aside class="notes">
-						xxx
+						Be kind, encrypt. It's free now and easier than ever. With HTTP/2 there is also no penalty for handshakes.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						test your cert with ssllabs.com for common security flaws
+						Test your cert with ssllabs.com for common security flaws<br>
+						(and stay up to date)
 					</h3>
 
 					<aside class="notes">
-						xxx
+						Staying up to date is important today. Things happen and you are responsible for the code you run publicly.
 					</aside>
 				</section>
 			</section>
@@ -583,97 +573,94 @@
 
 					<ul class="linklist">
 						<li class="fragment fade-up">
-							xxx
+							Be consistent
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							Be stable
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							Be secure
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							Be flexible
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							Work on adoption<br>
+							<small>(Make it open source)</small>
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							Use it yourself
+						</li>
+						<li class="fragment fade-up">
+							Document all the things<br>
+							<small>(and make it pretty)</small>
 						</li>
 					</ul>
 
 					<aside class="notes">
-						xxx
+						An accessible API has to consider a lot of things.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						there are other things out there than REST
+						Usable from browser? Why?
 					</h3>
 
 					<aside class="notes">
-						xxx
+						An API you can use from the browser as opposed to using complicated curl commands will make development easier. If that's not an option try finding
+						ways to make development easy by exposing endpoints for easy testing.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						format (JSON > XML > plain text?)
+						Status page for up-times and issue tracking
 					</h3>
 
 					<aside class="notes">
-						xxx
+						Nothing is worse than being stuck in development for hours because something isn't working and it turns out it was the API that's down.
+						Examples are:
+
+						<ul>
+							<li>https://status.github.com/</li>
+							<li>http://status.npmjs.org/</li>
+							<li>https://www.traviscistatus.com/</li>
+							<li>http://www.google.com.au/appsstatus#hl=en&amp;v=status</li>
+							<li>https://dev.twitter.com/overview/status</li>
+							<li>https://www.apple.com/au/support/systemstatus/</li>
+							<li>https://status.shopify.com/</li>
+						</ul>
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						usable from browser? why?
+						Test(human - and unit - test) your endpoints, constantly
 					</h3>
 
 					<aside class="notes">
-						xxx
+						Unit test help you catch logical errors and help you not break things while enhancing your API. Human testing helps you keep things easy.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						status page for up-times and issue tracking
+						Scale! Before you need to
 					</h3>
 
 					<aside class="notes">
-						xxx
+						The fine line between scaling your API and keeping the costs low is what good APIs are all about.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						test(human and unit tests) your endpoints, constantly
+						Document and publish examples
 					</h3>
 
 					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						scale! before you need to
-					</h3>
-
-					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						document and publish examples
-					</h3>
-
-					<aside class="notes">
-						xxx
+						Examples are the docs many developers use to learn. Remeber to support the different ways of learning: visual, examples and by doing.
 					</aside>
 				</section>
 			</section>
@@ -688,87 +675,85 @@
 
 					<ul class="linklist">
 						<li class="fragment fade-up">
-							xxx
+							If you have a game => Document to draw in
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							If you have a service => Document to explain
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							If you have an API => Document to teach
 						</li>
 						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
+							If you have a website => Document to state browser/screanreader support
 						</li>
 					</ul>
 
 					<aside class="notes">
-						xxx
+						Documentation is often descoped first but once you get your MVC out, scope it in again. It always helps and amounts to great customer service and
+						brand engagement.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						communicate to humans (be visual)
+						Communicate to humans (be visual)
 					</h3>
 
 					<aside class="notes">
-						xxx
+						More than half of us are visual learners. We all can intake infos visually faster than reading.
+						https://www.blackhat.com/presentations/bh-usa-08/Conti_Dean/BH_US_08_Conti_Dean_Visual_Forensic_Analysis.pdf
+						While reverse engineering a binary data dump to search for the maleware payload they found that visualizing the data was easier for the eyes to
+						capture patterns.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						make your docs accessible (duh!)
+						Make your docs accessible (duh!)
 					</h3>
 
 					<aside class="notes">
-						xxx
+						That doesn't just means it works for screen readers. It also means all the other things mentioned in WCAG 2.0.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						provide searches
+						Provide a search
 					</h3>
 
 					<aside class="notes">
-						xxx
+						Naming things is hard and we don't always know what to look for. Fuzzy search and predictive serach helps there.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						give ways out for frustrated stuck users
+						Give ways out for frustrated stuck users
 					</h3>
 
 					<aside class="notes">
-						xxx
+						404 pages should include a list of links where to go next including a link to your search page.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						code examples
+						Show meaningful code examples
 					</h3>
 
 					<aside class="notes">
-						xxx
+						Don't just document, also put it together in a meaningful way to show how it might be used.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						more than one way (videos, docs, playgrounds)
+						More than one way (videos/animations, docs, playgrounds)
 					</h3>
 
 					<aside class="notes">
-						xxx
+						People are different and everyone learns in different ways. Try to cover the big three.
 					</aside>
 				</section>
 			</section>
@@ -781,39 +766,26 @@
 				<section>
 					<h3 class="slide-headline slide-headline-small">Tabs vs spaces</h3>
 
-					<ul class="linklist">
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-					</ul>
+					<img src="assets/img/tabs-v-spaces.gif" alt="A scene from the HBO TV show 'Sillicon Valley' in which the hero spilt up with the hot girlfriend
+						becasue she uses spaces instead of tabs.">
 
 					<aside class="notes">
-						xxx
+						Uhm... no need to explain anything right?
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						tabs for indentation, spaces for alignment (hate me now!)
+						Use tabs for indentation,<br>
+						spaces for alignment.
 					</h3>
 
+					<p class="fragment fade-up">
+						It's all the same once it’s gone through the compiler right?!
+					</p>
+
 					<aside class="notes">
-						xxx
+						Tabs can be cusomized to the preference of the coder while staying consistent among the team.
 					</aside>
 				</section>
 			</section>
@@ -828,37 +800,32 @@
 
 					<ul class="linklist">
 						<li class="fragment fade-up">
-							xxx
+							Consistency
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							Maintainable
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							Readability
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							Less arguments
 						</li>
 						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
+							Less rogue bus hitting
 						</li>
 					</ul>
 
 					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						for on-boarding and the rogue bus hitting your engineers
-					</h3>
-
-					<aside class="notes">
-						xxx
+						It's easier to understand code when everything is consistent.
+						It's easier to maintain code that is consistent.
+						Quality of code is not just in execution but also in readability.
+						Shuts down arbitrary arguments about personal preferences.
+						For on-boarding and the rogue bus hitting your engineers
+						The amount of times I've been threatened with busses hitting everyone in my team shoud be enough for me to never cross a road.
+						Use IDEs that support the styling and JSCS to format it on commit/save.
+						http://jscs.info/
+						https://medium.com/@addyosmani/auto-formatting-javascript-code-style-fe0f98a923b8#.i3z9hbamk
 					</aside>
 				</section>
 			</section>
@@ -869,176 +836,53 @@
 			****************************************************************************************************************************************************** -->
 			<section id="customerinteractions">
 				<section>
-					<h3 class="slide-headline slide-headline-small">Customer interactions</h3>
+					<h3 class="slide-headline slide-headline-small">Community</h3>
+
+					<aside class="notes">
+						Accessible open source is hard and not to be taken on lightly. FOSS comes with lots of advantages but I want to outline the bits that are important
+						to talk to your community.
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						Communication
+					</h3>
 
 					<ul class="linklist">
 						<li class="fragment fade-up">
-							xxx
+							Communicate failures and be open about it (apologise)
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							Communicate changes and challenges
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							Take critisism on board but don't be afraid to take a stance
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							Give reasons why some PR might not be expected
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							Ask for opinions (make proposals)
 						</li>
 						<li class="fragment fade-up">
-							xxx
+							Take pride in your work<br>
+							Get excited (it's infectious)
 						</li>
 					</ul>
 
 					<aside class="notes">
-						xxx
+						You never now what a person comes from. Be inclusive and positive.
 					</aside>
 				</section>
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						communicate failures and be open about it (apologise)
+						Make community guidelines and statements of inclusion straight forward and clear.
 					</h3>
 
 					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						communicate changes and challenges
-					</h3>
-
-					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						take pride
-					</h3>
-
-					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						get excited (it's infectious)
-					</h3>
-
-					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-			</section>
-
-
-			<!-- *****************************************************************************************************************************************************
-			*  FACILITATE OPEN SOURCE PRS
-			****************************************************************************************************************************************************** -->
-			<section id="opensource">
-				<section>
-					<h3 class="slide-headline slide-headline-small">Facilitate open source PRs</h3>
-
-					<ul class="linklist">
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-						<li class="fragment fade-up">
-							xxx
-						</li>
-					</ul>
-
-					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						documentations&hellip;
-					</h3>
-
-					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						community guidelines
-					</h3>
-
-					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						github templates
-					</h3>
-
-					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						take critisism on board but don't be afraid to take a stance
-					</h3>
-
-					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						give reasons why some PR might not be expected
-					</h3>
-
-					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						ask for opinions (proposals)
-					</h3>
-
-					<aside class="notes">
-						xxx
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						enforce those styleguides
-					</h3>
-
-					<aside class="notes">
-						xxx
+						Take a stance against opression and work with your community to help where help is needed most.
 					</aside>
 				</section>
 			</section>
