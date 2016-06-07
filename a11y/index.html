@@ -28,9 +28,26 @@
 				<ul class="slide-list">
 					<li><a href="//twitter.com/wilkowskidom">@wilkowskidom</a></li>
 					<li>UI principle lead</li>
-					<li><a href="https://gel.westpacgroup.com.au">Westpac</a></li>
-					<li><a href="http://theworkingparty.com.au">The Working Party</a></li>
+					<li><a href="https://gel.westpacgroup.com.au/GUI">Westpac GUI</a></li>
+					<li><a href="https://theworkingparty.com.au">The Working Party</a></li>
 				</ul>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  SUBLINE
+			****************************************************************************************************************************************************** -->
+			<section id="subline">
+				<h2 class="slide-headline slide-headline-small">
+					Or:
+				</h2>
+
+				<img src="assets/img/no-a11y.jpg" alt="A screenshot of a tweet of a photo showing a very steep ramp that would be impossible to be useful to a
+					wheelchair user">
+
+				<aside class="notes">
+					I always remember this to make sure what I do actually adds value: https://twitter.com/jameswillweb/status/739152699086753792
+				</aside>
 			</section>
 
 
@@ -41,7 +58,7 @@
 				<h2 class="slide-headline slide-headline-small">Content</h2>
 
 				<ol class="linklist">
-					<li>
+					<!-- <li>
 						<a href="#morethanscreenreaders">More than screenreaders</a>
 					</li>
 					<li>
@@ -52,24 +69,24 @@
 					</li>
 					<li>
 						<a href="#datacap">Data cap</a>
-					</li>
+					</li> -->
 					<li>
 						<a href="#adblockersprivacy">Add blockers and privacy</a>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="#api">API</a>
 					</li>
 					<li>
 						<a href="#documentation">Documentation</a>
 					</li>
 					<li>
-						<a href="#tabsspaces">Tabs vs Spaces</a>
-					</li>
-					<li>
 						<a href="#codingstyleguide">Coding styleguides</a>
-					</li>
+					</li> -->
 					<li>
 						<a href="#community">Community</a>
+					</li>
+					<li>
+						<a href="#tabsspaces">Tabs vs Spaces</a>
 					</li>
 				</ol>
 
@@ -82,7 +99,7 @@
 			<!-- *****************************************************************************************************************************************************
 			*  MORE THAN SCREENREADERS
 			****************************************************************************************************************************************************** -->
-			<section id="morethanscreenreaders">
+			<!-- <section id="morethanscreenreaders">
 				<section>
 					<h2 class="slide-headline slide-headline-small">More than screenreaders</h2>
 
@@ -208,13 +225,13 @@
 						In a sprite use the title attribute and tie it to the SVG via aria-describedby
 					</aside>
 				</section>
-			</section>
+			</section> -->
 
 
 			<!-- *****************************************************************************************************************************************************
 			*  SLOW INTERNET
 			****************************************************************************************************************************************************** -->
-			<section id="slowinternet">
+			<!-- <section id="slowinternet">
 				<section>
 					<h3 class="slide-headline slide-headline-small">Slow internet</h3>
 
@@ -354,7 +371,7 @@
 
 					<aside class="notes">
 						When building your SPA or website make sure you devide and conquer. When HTML is loaded it should be functional and readable. HTML is your best
-						fallback.
+						fallback. http://w3c.github.io/aria-in-html/
 					</aside>
 				</section>
 
@@ -373,13 +390,13 @@
 						<a href="https://kinsta.com/learn/what-is-http2/">HTTP/2 and SPDY article</a> is a great resource.
 					</aside>
 				</section>
-			</section>
+			</section> -->
 
 
 			<!-- *****************************************************************************************************************************************************
 			*  SLOW DEVICE
 			****************************************************************************************************************************************************** -->
-			<section id="slowdevice">
+			<!-- <section id="slowdevice">
 				<section>
 					<h3 class="slide-headline slide-headline-small">Slow device</h3>
 
@@ -413,25 +430,28 @@
 						node code.
 					</aside>
 				</section>
-			</section>
+			</section> -->
 
 
 			<!-- *****************************************************************************************************************************************************
 			*  DATA CAP
 			****************************************************************************************************************************************************** -->
-			<section id="datacap">
+			<!-- <section id="datacap">
 				<section>
 					<h3 class="slide-headline slide-headline-small">Data cap</h3>
 
 					<ul class="linklist">
 						<li class="fragment fade-up">
-							Might be locked into an old contract
+							Old contract
 						</li>
 						<li class="fragment fade-up">
-							Might live in a country that only offeres data-caped contracts
+							Data-caped contracts offeres common
 						</li>
 						<li class="fragment fade-up">
-							Might not be as well payed as you are
+							Traveling/roaming
+						</li>
+						<li class="fragment fade-up">
+							Too expensive
 						</li>
 					</ul>
 
@@ -493,7 +513,7 @@
 						Using the cache means working WITH the browser and not reinventing it inside.
 					</aside>
 				</section>
-			</section>
+			</section> -->
 
 
 			<!-- *****************************************************************************************************************************************************
@@ -505,16 +525,19 @@
 
 					<ul class="linklist">
 						<li class="fragment fade-up">
-							Ad blockers are the new hip way to rebell against the MAN
+							Ad blockers are the new hip way to stick it to the MAN
 						</li>
 						<li class="fragment fade-up">
-							There are also some valid security concers
+							There are also some valid security concers too
+						</li>
+						<li class="fragment fade-up">
+							Some use them to slim down the size of your web app
 						</li>
 					</ul>
 
 					<aside class="notes">
-						Do you tell your users what plugins you use of third party services?
-						Do you know what all those services actually track?
+						Do you tell your users what plugins of third party services you use? E.g.: Facebook like, Twitter share etc.
+						Do you know what all those services actually track / save?
 					</aside>
 				</section>
 
@@ -523,8 +546,15 @@
 						False positive -> no-js
 					</h3>
 
+					<ul class="center-list">
+						<li class="fragment fade-up">
+							https://easylist.github.io/easylist/easylist.txt
+						</li>
+					</ul>
+
 					<aside class="notes">
-						False positives happen. Now your js is blocked. Does your website work still?
+						False positives happen. Now your js is blocked. Does your website work still? There is a long list of strings that are block here:
+						https://easylist.github.io/easylist/easylist.txt
 					</aside>
 				</section>
 
@@ -533,8 +563,19 @@
 						Don't use icon fonts
 					</h3>
 
+					<ul class="exchange-list">
+						<li>
+							<img class="fragment fade-out" data-fragment-index="1" src="assets/img/with-webfonts.jpg" alt="A screenshot of an icon set showing lots of
+								different icons">
+						</li>
+						<li class="fragment fade-in" data-fragment-index="1">
+							<img src="assets/img/without-webfonts.jpg" alt="A screenshot of an icon set showing lots of missing icons with boxes">
+						</li>
+					</ul>
+
 					<aside class="notes">
-						Font's are among the first things to be blocked to save data.
+						Font’s are among the first things to be blocked to save data. There are also issues with dyslexicia and replacing fonts.
+						https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam?hl=en
 					</aside>
 				</section>
 
@@ -564,7 +605,7 @@
 			<!-- *****************************************************************************************************************************************************
 			*  API
 			****************************************************************************************************************************************************** -->
-			<section id="api">
+			<!-- <section id="api">
 				<section>
 					<h3 class="slide-headline slide-headline-small">API</h3>
 
@@ -660,13 +701,13 @@
 						Examples are the docs many developers use to learn. Remeber to support the different ways of learning: visual, examples and by doing.
 					</aside>
 				</section>
-			</section>
+			</section> -->
 
 
 			<!-- *****************************************************************************************************************************************************
 			*  DOCUMENTATION
 			****************************************************************************************************************************************************** -->
-			<section id="documentation">
+			<!-- <section id="documentation">
 				<section>
 					<h3 class="slide-headline slide-headline-small">Documentation</h3>
 
@@ -753,6 +794,103 @@
 						People are different and everyone learns in different ways. Try to cover the big three.
 					</aside>
 				</section>
+			</section> -->
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  CODING STYLEGUIDE
+			****************************************************************************************************************************************************** -->
+			<!-- <section id="codingstyleguide">
+				<section>
+					<h3 class="slide-headline slide-headline-small">Coding Styleguide</h3>
+
+					<ul class="linklist">
+						<li class="fragment fade-up">
+							Consistency
+						</li>
+						<li class="fragment fade-up">
+							Maintainable
+						</li>
+						<li class="fragment fade-up">
+							Readability
+						</li>
+						<li class="fragment fade-up">
+							Less arguments
+						</li>
+						<li class="fragment fade-up">
+							Less rogue bus hitting
+						</li>
+					</ul>
+
+					<aside class="notes">
+						It's easier to understand code when everything is consistent.
+						It's easier to maintain code that is consistent.
+						Quality of code is not just in execution but also in readability.
+						Shuts down arbitrary arguments about personal preferences.
+						For on-boarding and the rogue bus hitting your engineers
+						The amount of times I've been threatened with busses hitting everyone in my team shoud be enough for me to never cross a road.
+						Use IDEs that support the styling and JSCS to format it on commit/save.
+						http://jscs.info/
+						https://medium.com/@addyosmani/auto-formatting-javascript-code-style-fe0f98a923b8#.i3z9hbamk
+					</aside>
+				</section>
+			</section> -->
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  COMMUNITY
+			****************************************************************************************************************************************************** -->
+			<section id="community">
+				<section>
+					<h3 class="slide-headline slide-headline-small">Community</h3>
+
+					<aside class="notes">
+						Accessible open source is hard and not to be taken on lightly. FOSS comes with lots of advantages but I want to outline the bits that are important
+						to talk to your community.
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						Communication
+					</h3>
+
+					<ul class="linklist">
+						<li class="fragment fade-up">
+							Communicate failures and be open about it (apologise)
+						</li>
+						<li class="fragment fade-up">
+							Communicate changes and challenges
+						</li>
+						<li class="fragment fade-up">
+							Take critisism on board but don't be afraid to take a stance
+						</li>
+						<li class="fragment fade-up">
+							Give reasons why some PR might not be expected and <a href="https://blog.jessfraz.com/post/the-art-of-closing/">close</a>
+						</li>
+						<li class="fragment fade-up">
+							Ask for opinions (make proposals)
+						</li>
+						<li class="fragment fade-up">
+							Take pride in your work<br>
+							Get excited (it's infectious)
+						</li>
+					</ul>
+
+					<aside class="notes">
+						You never now what a person comes from. Be inclusive and positive.
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="slide-headline slide-headline-small">
+						Make community guidelines and statements of inclusion straight forward and clear.
+					</h3>
+
+					<aside class="notes">
+						Take a stance against opression and work with your community to help where help is needed most.
+					</aside>
+				</section>
 			</section>
 
 
@@ -787,102 +925,6 @@
 				</section>
 			</section>
 
-
-			<!-- *****************************************************************************************************************************************************
-			*  CODING STYLEGUIDE
-			****************************************************************************************************************************************************** -->
-			<section id="codingstyleguide">
-				<section>
-					<h3 class="slide-headline slide-headline-small">Coding Styleguide</h3>
-
-					<ul class="linklist">
-						<li class="fragment fade-up">
-							Consistency
-						</li>
-						<li class="fragment fade-up">
-							Maintainable
-						</li>
-						<li class="fragment fade-up">
-							Readability
-						</li>
-						<li class="fragment fade-up">
-							Less arguments
-						</li>
-						<li class="fragment fade-up">
-							Less rogue bus hitting
-						</li>
-					</ul>
-
-					<aside class="notes">
-						It's easier to understand code when everything is consistent.
-						It's easier to maintain code that is consistent.
-						Quality of code is not just in execution but also in readability.
-						Shuts down arbitrary arguments about personal preferences.
-						For on-boarding and the rogue bus hitting your engineers
-						The amount of times I've been threatened with busses hitting everyone in my team shoud be enough for me to never cross a road.
-						Use IDEs that support the styling and JSCS to format it on commit/save.
-						http://jscs.info/
-						https://medium.com/@addyosmani/auto-formatting-javascript-code-style-fe0f98a923b8#.i3z9hbamk
-					</aside>
-				</section>
-			</section>
-
-
-			<!-- *****************************************************************************************************************************************************
-			*  CUSTOMER INTERACTIONS
-			****************************************************************************************************************************************************** -->
-			<section id="community">
-				<section>
-					<h3 class="slide-headline slide-headline-small">Community</h3>
-
-					<aside class="notes">
-						Accessible open source is hard and not to be taken on lightly. FOSS comes with lots of advantages but I want to outline the bits that are important
-						to talk to your community.
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						Communication
-					</h3>
-
-					<ul class="linklist">
-						<li class="fragment fade-up">
-							Communicate failures and be open about it (apologise)
-						</li>
-						<li class="fragment fade-up">
-							Communicate changes and challenges
-						</li>
-						<li class="fragment fade-up">
-							Take critisism on board but don't be afraid to take a stance
-						</li>
-						<li class="fragment fade-up">
-							Give reasons why some PR might not be expected
-						</li>
-						<li class="fragment fade-up">
-							Ask for opinions (make proposals)
-						</li>
-						<li class="fragment fade-up">
-							Take pride in your work<br>
-							Get excited (it's infectious)
-						</li>
-					</ul>
-
-					<aside class="notes">
-						You never now what a person comes from. Be inclusive and positive.
-					</aside>
-				</section>
-
-				<section>
-					<h3 class="slide-headline slide-headline-small">
-						Make community guidelines and statements of inclusion straight forward and clear.
-					</h3>
-
-					<aside class="notes">
-						Take a stance against opression and work with your community to help where help is needed most.
-					</aside>
-				</section>
-			</section>
 		</div>
 	</div>
 
