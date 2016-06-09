@@ -92,10 +92,9 @@ module.exports = function(grunt) {
 			compile: {
 				files: {
 					'assets/js/site.min.js': [
-						'assets/js/**/*.js',
+						'assets/js/*.js',
 						'!assets/js/site.min.js',
 						'!assets/js/*jquery*.js',
-						'!assets/js/notes-server/*.js',
 					],
 				},
 			},
