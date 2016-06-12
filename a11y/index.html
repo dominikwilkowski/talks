@@ -60,14 +60,11 @@
 				<ol class="linklist">
 					<!-- <li>
 						<a href="#morethanscreenreaders">More than screenreaders</a>
-					</li>
+					</li> -->
 					<li>
-						<a href="#slowinternet">Slow internet</a>
+						<a href="#considerothers">Consider the other side</a>
 					</li>
-					<li>
-						<a href="#slowdevice">Slow device</a>
-					</li>
-					<li>
+					<!-- <li>
 						<a href="#datacap">Data cap</a>
 					</li> -->
 					<li>
@@ -231,7 +228,29 @@
 			<!-- *****************************************************************************************************************************************************
 			*  SLOW INTERNET
 			****************************************************************************************************************************************************** -->
-			<!-- <section id="slowinternet">
+			<section id="considerothers">
+				<section>
+					<h3 class="slide-headline slide-headline-small">Consider the other side</h3>
+
+					<ul class="exchange-list">
+						<li class="fragment fade-out" data-fragment-index="2">
+							<img class="fragment fade-in" data-fragment-index="1" src="assets/img/workspace.jpg" alt="A photo of workspace with a lot of very expensive
+								computers and other devices, securely at home on a desk">
+						</li>
+						<li class="fragment fade-out" data-fragment-index="3">
+							<img class="fragment fade-in" data-fragment-index="2" src="assets/img/speed.jpg" alt="A screenshot of the internet speed test results for google fiber with gigabyte internet connection">
+						</li>
+						<li class="fragment fade-in" data-fragment-index="3">
+							<img src="assets/img/internet-speed.jpg" alt="A meme asking sarcastically about internet speeds">
+						</li>
+					</ul>
+
+					<aside class="notes">
+						It all works on your test machine so all well right?
+					</aside>
+				</section>
+
+
 				<section>
 					<h3 class="slide-headline slide-headline-small">Slow internet</h3>
 
@@ -240,10 +259,10 @@
 							Remote areas in Australia<br>
 							<small>(Almost everywhere in Oz really)</small>
 						</li>
-						<li class="fragment fade-up">
+						<!-- <li class="fragment fade-up">
 							Remote areas <strong>not</strong> in Australia<br>
 							<small>(Almost everywhere else really)</small>
-						</li>
+						</li> -->
 						<li class="fragment fade-up">
 							Train / Bus in tunnel
 						</li>
@@ -263,29 +282,29 @@
 					</aside>
 				</section>
 
-				<section>
+				<!-- <section>
 					<h3 class="slide-headline slide-headline-small">
 						User feedback
 					</h3>
 
 					<ul class="exchange-list">
 						<li>
-							<img class="fragment fade-out" data-fragment-index="1" src="assets/img/feedback5.gif" alt="An animation of an offline warning message popping up
-							from the top and reconnecting with a spinner">
+							<img class="fragment fade-out" data-fragment-index="1" src="assets/img/feedback4.jpg" alt="A screenshot of Steviewonder.net with an error message to rotate device and nother else visible">
 						</li>
 						<li class="fragment fade-in" data-fragment-index="1">
 							<img class="fragment fade-out" data-fragment-index="2" src="assets/img/feedback1.jpg" alt="A screenshot of Trellos offline message showing two
-							red boxes with explanation and way forward">
+								red boxes with explanation and way forward">
 						</li>
 						<li class="fragment fade-in" data-fragment-index="2">
 							<img class="fragment fade-out" data-fragment-index="3" src="assets/img/feedback2.jpg" alt="A screenshot of Slacks offline message a quick message
-							and a retry link">
+								and a retry link">
 						</li>
 						<li class="fragment fade-in" data-fragment-index="3">
 							<img class="fragment fade-out" data-fragment-index="4" src="assets/img/feedback3.jpg" alt="A screenshot of the Westpac blender error page">
 						</li>
 						<li class="fragment fade-in" data-fragment-index="4">
-							<img src="assets/img/feedback4.jpg" alt="A screenshot of Steviewonder.net with an error message to rotate device and nother else visible">
+							<img src="assets/img/feedback5.gif" alt="An animation of an offline warning message popping up
+								from the top and reconnecting with a spinner">
 						</li>
 					</ul>
 
@@ -296,7 +315,7 @@
 						<a href="https://www.nngroup.com/articles/response-times-3-important-limits/">Nielsen article</a>, fill it with usefull feedback and give up at
 						some point. Add fallbacks to your nodejs app with a nginx proxy and an error page.
 					</aside>
-				</section>
+				</section> -->
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
@@ -339,15 +358,9 @@
 										</li>
 									</ul>
 								</li>
-								<li class="fragment fade-in">
-									<h4><a href="http://alistapart.com/article/offline-first">A LIST APART article</a></h4>
-
-									<ul class="linklist">
-										<li class="fragment fade-in">Remain functional and store states/data locally</li>
-										<li class="fragment fade-in">Offline is not an error.</li>
-										<li class="fragment fade-in">Commuicate a possible risk of something being out of sync</li>
-									</ul>
-								</li>
+								<li class="fragment fade-in">Offline is not an error</li>
+								<li class="fragment fade-in">Remain functional and store states/data locally</li>
+								<li class="fragment fade-in">Commuicate a possible risk of something being out of sync</li>
 							</ul>
 						</li>
 					</ul>
@@ -355,6 +368,7 @@
 					<aside class="notes">
 						Build your app offline first. Have a look at this repo about all <a href="https://github.com/offlinefirst">things offline first</a>.
 						There is a fantastic repo for more docs under: <a href="https://github.com/pazguille/offline-first">https://github.com/pazguille/offline-first</a>.
+						<a href="http://alistapart.com/article/offline-first">A LIST APART article</a>
 					</aside>
 				</section>
 
@@ -383,6 +397,7 @@
 					<ul class="linklist">
 						<li class="fragment fade-in">No more http request counting</li>
 						<li class="fragment fade-in">Modularize all the things</li>
+						<li class="fragment fade-in">Img and SVG sprites = Anti Pattern</li>
 						<li class="fragment fade-in">Inlining critical CSS = Anti Pattern</li>
 					</ul>
 
@@ -390,13 +405,7 @@
 						<a href="https://kinsta.com/learn/what-is-http2/">HTTP/2 and SPDY article</a> is a great resource.
 					</aside>
 				</section>
-			</section> -->
 
-
-			<!-- *****************************************************************************************************************************************************
-			*  SLOW DEVICE
-			****************************************************************************************************************************************************** -->
-			<!-- <section id="slowdevice">
 				<section>
 					<h3 class="slide-headline slide-headline-small">Slow device</h3>
 
@@ -422,15 +431,16 @@
 				<section>
 					<h3 class="slide-headline slide-headline-small">
 						Test your performance<br>
-						(60fps, #perfmatters)
+						(RAIL, 60fps, #perfmatters)
 					</h3>
 
 					<aside class="notes">
-						At I/O 2016 the inspector got some love including a PR to the node project so you can use the Chrome inspector ti inspect and profile your
-						node code.
+						At I/O 2016 the inspector got some love including a PR to the node project so you can use the Chrome inspector to inspect and profile your
+						node code. Paul Irish &amp; Paul Lewis:
+						https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/rail?hl=en
 					</aside>
 				</section>
-			</section> -->
+			</section>
 
 
 			<!-- *****************************************************************************************************************************************************
@@ -531,7 +541,7 @@
 							There are also some valid security concers too
 						</li>
 						<li class="fragment fade-up">
-							Some use them to slim down the size of your web app
+							Others use them to save on data cap
 						</li>
 					</ul>
 
@@ -543,7 +553,7 @@
 
 				<section>
 					<h3 class="slide-headline slide-headline-small">
-						False positive -> no-js
+						False positive ➝ no-js
 					</h3>
 
 					<ul class="center-list">
@@ -840,7 +850,7 @@
 			<!-- *****************************************************************************************************************************************************
 			*  COMMUNITY
 			****************************************************************************************************************************************************** -->
-			<section id="community">
+			<!-- <section id="community">
 				<section>
 					<h3 class="slide-headline slide-headline-small">Community</h3>
 
@@ -891,7 +901,7 @@
 						Take a stance against opression and work with your community to help where help is needed most.
 					</aside>
 				</section>
-			</section>
+			</section> -->
 
 
 			<!-- *****************************************************************************************************************************************************
@@ -901,7 +911,7 @@
 				<section>
 					<h3 class="slide-headline slide-headline-small">Tabs vs spaces</h3>
 
-					<img src="assets/img/tabs-v-spaces.gif" alt="A scene from the HBO TV show 'Sillicon Valley' in which the hero spilt up with the hot girlfriend
+					<img src="assets/img/tabs-vs-spaces.gif" alt="A scene from the HBO TV show 'Sillicon Valley' in which the hero spilt up with the hot girlfriend
 						becasue she uses spaces instead of tabs.">
 
 					<aside class="notes">
@@ -923,6 +933,13 @@
 						Tabs can be cusomized to the preference of the coder while staying consistent among the team.
 					</aside>
 				</section>
+			</section>
+
+			<!-- *****************************************************************************************************************************************************
+			*  TABS VS SPACES
+			****************************************************************************************************************************************************** -->
+			<section id="theend">
+				<h2>Thank you</h2>
 			</section>
 
 		</div>
