@@ -18,10 +18,10 @@
 			<!-- *****************************************************************************************************************************************************
 			*  INTRO
 			****************************************************************************************************************************************************** -->
-			<section id="headline">
+			<section id="headline" data-transition="fade-out">
 				<h1 class="slide-headline slide-headline-small">
-					My favourite A<span class="numbers">11</span>Y things<br>
-					<small>Or why A<span class="numbers">11</span>y doesn’t stop with screen readers</small>
+					My favourite a<span class="numbers">11</span>y things<br>
+					<small>Or why a<span class="numbers">11</span>y doesn’t stop with screen readers</small>
 				</h1>
 
 				<h2 class="slide-subline buffer">By Dominik</h2>
@@ -37,7 +37,7 @@
 			<!-- *****************************************************************************************************************************************************
 			*  SUBLINE
 			****************************************************************************************************************************************************** -->
-			<section id="subline">
+			<section id="subline" data-transition="fade-in convex-out">
 				<h2 class="slide-headline slide-headline-small">
 					Or:
 				</h2>
@@ -58,31 +58,34 @@
 				<h2 class="slide-headline slide-headline-small">Content</h2>
 
 				<ol class="linklist">
-					<!-- <li>
-						<a href="#morethanscreenreaders">More than screenreaders</a>
-					</li> -->
-					<li>
-						<a href="#considerothers">Consider the other side</a>
+					<li class="fragment fade-out" data-fragment-index="0">
+						<a href="#htmlishard">HTML is hard</a>
 					</li>
-					<!-- <li>
+					<li data-fragment-index="0">
+						<a href="#slowinternet">Internet is slow</a>
+					</li>
+					<li data-fragment-index="0">
+						<a href="#slowdevices">Devices are slow</a>
+					</li>
+					<!-- <li class="fragment fade-out" data-fragment-index="0">
 						<a href="#datacap">Data cap</a>
 					</li> -->
-					<li>
-						<a href="#adblockersprivacy">Add blockers and privacy</a>
+					<li data-fragment-index="0">
+						<a href="#security">Security is important</a>
 					</li>
-					<!-- <li>
-						<a href="#api">API</a>
+					<li class="fragment fade-out" data-fragment-index="0">
+						<a href="#api">Accessible APIs</a>
 					</li>
-					<li>
-						<a href="#documentation">Documentation</a>
+					<li class="fragment fade-out" data-fragment-index="0">
+						<a href="#documentation">Accessible documentation</a>
 					</li>
-					<li>
-						<a href="#codingstyleguide">Coding styleguides</a>
-					</li> -->
-					<li>
-						<a href="#community">Community</a>
+					<li class="fragment fade-out" data-fragment-index="0">
+						<a href="#codingstyleguide">Accessible coding styleguides</a>
 					</li>
-					<li>
+					<li class="fragment fade-out" data-fragment-index="0">
+						<a href="#community">Accessible open source</a>
+					</li>
+					<li data-fragment-index="0">
 						<a href="#tabsspaces">Tabs vs Spaces</a>
 					</li>
 				</ol>
@@ -96,9 +99,9 @@
 			<!-- *****************************************************************************************************************************************************
 			*  MORE THAN SCREENREADERS
 			****************************************************************************************************************************************************** -->
-			<!-- <section id="morethanscreenreaders">
+			<!-- <section id="htmlishard">
 				<section>
-					<h2 class="slide-headline slide-headline-small">More than screenreaders</h2>
+					<h2 class="slide-headline slide-headline-small">HTML is hard</h2>
 
 					<ul class="linklist">
 						<li class="fragment fade-up">
@@ -228,31 +231,33 @@
 			<!-- *****************************************************************************************************************************************************
 			*  SLOW INTERNET
 			****************************************************************************************************************************************************** -->
-			<section id="considerothers">
-				<section>
-					<h3 class="slide-headline slide-headline-small">Consider the other side</h3>
+			<section id="slowinternet">
+				<!-- <section>
+					<h3 class="slide-headline slide-headline-small">Consider your users</h3>
 
 					<ul class="exchange-list">
 						<li class="fragment fade-out" data-fragment-index="2">
 							<img class="fragment fade-in" data-fragment-index="1" src="assets/img/workspace.jpg" alt="A photo of workspace with a lot of very expensive
 								computers and other devices, securely at home on a desk">
 						</li>
-						<li class="fragment fade-out" data-fragment-index="3">
-							<img class="fragment fade-in" data-fragment-index="2" src="assets/img/speed.jpg" alt="A screenshot of the internet speed test results for google fiber with gigabyte internet connection">
-						</li>
-						<li class="fragment fade-in" data-fragment-index="3">
-							<img src="assets/img/internet-speed.jpg" alt="A meme asking sarcastically about internet speeds">
+						<li class="fragment fade-in" data-fragment-index="2">
+							<img src="assets/img/speed.jpg" alt="A screenshot of the internet speed test results for google fiber with gigabyte internet connection">
 						</li>
 					</ul>
 
 					<aside class="notes">
 						It all works on your test machine so all well right?
+						<ul style="padding:0 1em;">
+							<li>when building on perfect computer</li>
+							<li>with perfect internet (google fiber)</li>
+							<li>how does that compare?</li>
+						</ul>
 					</aside>
-				</section>
+				</section> -->
 
 
 				<section>
-					<h3 class="slide-headline slide-headline-small">Slow internet</h3>
+					<h3 class="slide-headline slide-headline-small">Internet is slow</h3>
 
 					<ul class="linklist">
 						<li class="fragment fade-up">
@@ -328,16 +333,25 @@
 							showing empty boxes and no content">
 						</li>
 						<li class="fragment fade-in" data-fragment-index="1">
-							<img class="fragment fade-out" data-fragment-index="2" src="assets/img/offline2.jpg" alt="A screenshot of the reddit app without connection
-							showing an empty page with a loader">
+							<img class="fragment fade-out" data-fragment-index="2" src="assets/img/sad-kitten1.jpg" alt="A picture of a sad kitten">
 						</li>
 						<li class="fragment fade-in" data-fragment-index="2">
-							<img class="fragment fade-out" data-fragment-index="3" src="assets/img/offline3.jpg" alt="A screenshot of the twitter app without connection
+							<img class="fragment fade-out" data-fragment-index="3" src="assets/img/offline2.jpg" alt="A screenshot of the reddit app without connection
+							showing an empty page with a loader">
+						</li>
+						<li class="fragment fade-in" data-fragment-index="3">
+							<img class="fragment fade-out" data-fragment-index="4" src="assets/img/sad-kitten2.jpg" alt="A picture of a sad kitten">
+						</li>
+						<li class="fragment fade-in" data-fragment-index="4">
+							<img class="fragment fade-out" data-fragment-index="5" src="assets/img/offline3.jpg" alt="A screenshot of the twitter app without connection
 							showing an a lot of content but no images loaded">
 						</li>
+						<li class="fragment fade-in" data-fragment-index="5">
+							<img class="fragment fade-out" data-fragment-index="6" src="assets/img/happy-kitten1.jpg" alt="A picture of a happy kitten">
+						</li>
 						<li>
-							<ul class="linklist" class="fragment fade-in" data-fragment-index="3">
-								<li class="fragment fade-in" data-fragment-index="3">
+							<ul class="linklist" class="fragment fade-in" data-fragment-index="6">
+								<li class="fragment fade-in" data-fragment-index="6">
 									<h4>
 										W3C Specifications<br>
 										<small><a href="https://github.com/pazguille/offline-first">(awesome GitHub repo)</a></small>
@@ -366,13 +380,17 @@
 					</ul>
 
 					<aside class="notes">
-						Build your app offline first. Have a look at this repo about all <a href="https://github.com/offlinefirst">things offline first</a>.
+						<ul style="padding:0 1em;">
+							<li>Internet is resilient</li>
+							<li>Assume failure</li>
+						</ul>
+						<!-- Build your app offline first. Have a look at this repo about all <a href="https://github.com/offlinefirst">things offline first</a>.
 						There is a fantastic repo for more docs under: <a href="https://github.com/pazguille/offline-first">https://github.com/pazguille/offline-first</a>.
-						<a href="http://alistapart.com/article/offline-first">A LIST APART article</a>
+						<a href="http://alistapart.com/article/offline-first">A LIST APART article</a> -->
 					</aside>
 				</section>
 
-				<section>
+				<!-- <section>
 					<h3 class="slide-headline slide-headline-small">
 						Separation of concerns
 					</h3>
@@ -384,12 +402,15 @@
 					</ul>
 
 					<aside class="notes">
+						<ul style="padding:0 1em;">
+							<li>What else can we do?</li>
+						</ul>
 						When building your SPA or website make sure you devide and conquer. When HTML is loaded it should be functional and readable. HTML is your best
 						fallback. http://w3c.github.io/aria-in-html/
 					</aside>
-				</section>
+				</section> -->
 
-				<section>
+				<!-- <section>
 					<h3 class="slide-headline slide-headline-small">
 						HTTP/2
 					</h3>
@@ -402,19 +423,31 @@
 					</ul>
 
 					<aside class="notes">
+						<ul style="padding:0 1em;">
+							<li>Are there technologies that help?</li>
+						</ul>
 						<a href="https://kinsta.com/learn/what-is-http2/">HTTP/2 and SPDY article</a> is a great resource.
 					</aside>
-				</section>
+				</section> -->
+			</section>
 
+
+			<!-- *****************************************************************************************************************************************************
+			*  SLOW DEVICES
+			****************************************************************************************************************************************************** -->
+			<section id="slowdevices">
 				<section>
-					<h3 class="slide-headline slide-headline-small">Slow device</h3>
+					<h3 class="slide-headline slide-headline-small">Devices are slow</h3>
 
 					<img src="assets/img/fragmentation.jpg" alt="A screenshot of the current fragmentation among Android as of August 2015 showing hundreds of
 					differently sized versions in differing quanity">
 
 					<aside class="notes">
-						http://opensignal.com/reports/2015/08/android-fragmentation/ and http://www.nateberkopec.com/2015/10/07/frontend-performance-chrome-timeline.html
-						are great resources.
+						<ul style="padding:0 1em;">
+							<li>Reality is complex</li>
+						</ul>
+						<!-- http://opensignal.com/reports/2015/08/android-fragmentation/ and http://www.nateberkopec.com/2015/10/07/frontend-performance-chrome-timeline.html
+						are great resources. -->
 					</aside>
 				</section>
 
@@ -424,7 +457,11 @@
 					</h3>
 
 					<aside class="notes">
-						The assumption here is that older devices also have older browsers. That’s not always true.
+						<ul style="padding:0 1em;">
+							<li>older devices = older browsers</li>
+							<li>that’s not always true</li>
+						</ul>
+						<!-- The assumption here is that older devices also have older browsers. That’s not always true. -->
 					</aside>
 				</section>
 
@@ -435,9 +472,15 @@
 					</h3>
 
 					<aside class="notes">
-						At I/O 2016 the inspector got some love including a PR to the node project so you can use the Chrome inspector to inspect and profile your
+						<ul style="padding:0 1em;">
+							<li>There is no blanket rule</li>
+							<li>Paul Irish, Paul Lewis</li>
+							<li>RESPONSE ANIMATION IDLE LOAD</li>
+							<li>Aim for 60fps = get enough for older</li>
+						</ul>
+						<!-- At I/O 2016 the inspector got some love including a PR to the node project so you can use the Chrome inspector to inspect and profile your
 						node code. Paul Irish &amp; Paul Lewis:
-						https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/rail?hl=en
+						https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/rail?hl=en -->
 					</aside>
 				</section>
 			</section>
@@ -529,25 +572,26 @@
 			<!-- *****************************************************************************************************************************************************
 			*  AD BLOCKERS AND PRIVACY
 			****************************************************************************************************************************************************** -->
-			<section id="adblockersprivacy">
+			<section id="security">
 				<section>
-					<h3 class="slide-headline slide-headline-small">Ad blockers and privacy</h3>
+					<h3 class="slide-headline slide-headline-small">Security is important</h3>
 
 					<ul class="linklist">
 						<li class="fragment fade-up">
-							Ad blockers are the new hip way to stick it to the MAN
+							Ad blockers
 						</li>
 						<li class="fragment fade-up">
-							There are also some valid security concers too
-						</li>
-						<li class="fragment fade-up">
-							Others use them to save on data cap
+							Ad blockers to save on data
 						</li>
 					</ul>
 
 					<aside class="notes">
-						Do you tell your users what plugins of third party services you use? E.g.: Facebook like, Twitter share etc.
-						Do you know what all those services actually track / save?
+						<ul style="padding:0 1em;">
+							<li>religious fight</li>
+							<li>there are good reasons for usage</li>
+						</ul>
+						<!-- Do you tell your users what plugins of third party services you use? E.g.: Facebook like, Twitter share etc.
+						Do you know what all those services actually track / save? -->
 					</aside>
 				</section>
 
@@ -563,8 +607,13 @@
 					</ul>
 
 					<aside class="notes">
-						False positives happen. Now your js is blocked. Does your website work still? There is a long list of strings that are block here:
-						https://easylist.github.io/easylist/easylist.txt
+						<ul style="padding:0 1em;">
+							<li>Happens</li>
+							<li>Prevention</li>
+							<li>What if?</li>
+						</ul>
+						<!-- False positives happen. Now your js is blocked. Does your website work still? There is a long list of strings that are block here:
+						https://easylist.github.io/easylist/easylist.txt -->
 					</aside>
 				</section>
 
@@ -584,8 +633,12 @@
 					</ul>
 
 					<aside class="notes">
-						Font’s are among the first things to be blocked to save data. There are also issues with dyslexicia and replacing fonts.
-						https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam?hl=en
+						<ul style="padding:0 1em;">
+							<li>Among first to be blocked</li>
+							<li>replacement font for people w dyslexicia</li>
+						</ul>
+						<!-- Font’s are among the first things to be blocked to save data. There are also issues with dyslexicia and replacing fonts.
+						https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam?hl=en -->
 					</aside>
 				</section>
 
@@ -595,20 +648,28 @@
 					</h3>
 
 					<aside class="notes">
-						Be kind, encrypt. It's free now and easier than ever. With HTTP/2 there is also no penalty for handshakes.
+						<ul style="padding:0 1em;">
+							<li>trust</li>
+							<li>free and easy</li>
+							<li>http/2 no handshake</li>
+						</ul>
+						<!-- Be kind, encrypt. It's free now and easier than ever. With HTTP/2 there is also no penalty for handshakes. -->
 					</aside>
 				</section>
 
-				<section>
+				<!-- <section>
 					<h3 class="slide-headline slide-headline-small">
 						Test your cert with ssllabs.com for common security flaws<br>
 						(and stay up to date)
 					</h3>
 
 					<aside class="notes">
+						<ul style="padding:0 1em;">
+							<li>stay up to date</li>
+						</ul>
 						Staying up to date is important today. Things happen and you are responsible for the code you run publicly.
 					</aside>
-				</section>
+				</section> -->
 			</section>
 
 
@@ -915,7 +976,11 @@
 						becasue she uses spaces instead of tabs.">
 
 					<aside class="notes">
-						Uhm... no need to explain anything right?
+						<ul style="padding:0 1em;">
+							<li>Everyone is different</li>
+							<li>whitespace is a taste thing</li>
+						</ul>
+						<!-- Uhm... no need to explain anything right? -->
 					</aside>
 				</section>
 
@@ -926,11 +991,15 @@
 					</h3>
 
 					<p class="fragment fade-up">
-						It's all the same once it’s gone through the compiler right?!
+						It’s all the same once it’s gone through the compiler right?!
 					</p>
 
 					<aside class="notes">
-						Tabs can be cusomized to the preference of the coder while staying consistent among the team.
+						<ul style="padding:0 1em;">
+							<li>Settled once and for all.</li>
+							<li>Please refere to this talk for future discussions</li>
+						</ul>
+						<!-- Tabs can be cusomized to the preference of the coder while staying consistent among the team. -->
 					</aside>
 				</section>
 			</section>
@@ -939,14 +1008,13 @@
 			*  TABS VS SPACES
 			****************************************************************************************************************************************************** -->
 			<section id="theend">
-				<h2>Thank you</h2>
+				<h2>Any questions?</h2>
 			</section>
 
 		</div>
 	</div>
 
 	<script src="https://cdn.polyfill.io/v1/polyfill.min.js"></script>
-	<!-- <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script> -->
 	<script type="text/javascript" src="assets/js/site.min.js"></script>
 </body>
 </html>
