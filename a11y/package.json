@@ -29,7 +29,7 @@
 		"grunt-contrib-stylus": "^1.2.0",
 		"grunt-contrib-uglify": "^1.0.1",
 		"grunt-contrib-watch": "~1.0.0",
-		"grunt-font": "0.0.12",
+		"grunt-font": "0.0.13",
 		"grunt-grunticon": "^2.2.2",
 		"grunt-lintspaces": "^0.8.0",
 		"grunt-wakeup": "0.1.3"
