@@ -1,17 +1,18 @@
 .reveal
 	background-color #efefed
-	font-size 36px
 
-	*
-		font-family goudy
-		color #000a27
+	li
+		font-size 2.25rem
 
 	.slide-headline
 		font-family goudy
-		font-size 130px
+		font-size 8.125rem
+
+		&.slide-headline-first
+			text-align left
 
 		&.slide-headline-small
-			font-size 70px
+			font-size 4.375rem
 
 	small
 		font-size 50%
@@ -20,29 +21,31 @@
 		font-weight 900
 
 	.numbers
-		font-family serif
+		font-family sans-serif
+		font-weight normal
 
 	img
-		margin-top 30px
+		margin-top 1.875rem
 		max-width 100%
 
 	.slide-subline
 		font-family goudy
-		font-size 30px
+		font-size 1.875rem
 		text-align right
 
 		&.buffer
-			margin-top 300px
+			margin-top 20.75rem
 
 	.slide-list
 		list-style none
 		overflow hidden
-		font-size 12px
+		font-size 0.75rem
 		text-align right
 
 		li
 			display inline-block
-			margin-right 12px
+			margin-right 0.75rem
+			font-size 1.25rem
 
 			&:after
 				content ','
@@ -55,27 +58,27 @@
 
 	.linklist
 		display block
-		width 550px
+		width 34.375rem
 		margin auto
 		text-align left
 
 		ul
 		ol
-			margin-left 20px
+			margin-left 1.25rem
 
 		li
-			margin 12px 0
+			margin 1.2rem 0
 
 			&:last-child
 				margin-right 0
 
 	.exchange-list
 		list-style none
-		margin 12px auto
+		margin 0.75rem auto
 		padding 0
 		position relative
-		min-height 600px
-		width 700px
+		min-height 37.5rem
+		width 43.75rem
 		max-width 100%
 
 		&> li
@@ -87,15 +90,38 @@
 
 	.center-list
 		list-style none
-		margin 12px auto
-		width 700px
+		margin 0.75rem auto
+		width 43.75rem
 		max-width 100%
+
+	//underline 2.0
+	Text-underline-opacity = 20%;
+	Text-underline-color = #d5411f;
+	Text-underline-background-color = #efefed;
+	Text-underline-position = -0.20rem;
+	Text-underline-size = 0.04rem;
+	Text-underline-gap = 0.05em;
+	Text-underline-gap-minimum = 1.5px;
+
+	Text-underline-offset = Text-underline-position + Text-underline-size;
 
 	a
 		font-family goudy-italic
 		font-weight normal
 		text-decoration none
 		color #d5411f
+		box-shadow inset 0 -0.35em 0 0 Text-underline-background-color,
+			inset 0 -0.4em 0 0 Text-underline-color
+
+		text-shadow 0.05em 0 Text-underline-background-color,
+			-0.05em 0 Text-underline-background-color,
+			1.5px 0 Text-underline-background-color,
+			-1.5px 0 Text-underline-background-color
+
+		&::selection
+			background-color #b3d4fc
+			color #d5411f
+			text-shadow none
 
 	em
 		font-family goudy-italic
@@ -108,10 +134,13 @@
 	ol
 		ul
 		ol
-			margin-left 20px
+			margin-left 1.25rem
 
 	.notes
 		border 1px dotted #aaa
-		padding 12px
+		padding 0.75rem
 		font-size 16px
 		font-family sans-serif
+
+	.last
+		font-size 7rem
