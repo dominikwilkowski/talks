@@ -1,8 +1,8 @@
 {
-	"name": "westpac-talk",
+	"name": "talk-a11y",
 	"version": "0.0.1",
-	"description": "Westpac Talk",
-	"homepage": "http://dominikwilkowski.github.io/talks/westpac",
+	"description": "Talk A11y",
+	"homepage": "http://dominikwilkowski.github.io/talks/a11y",
 	"author": {
 		"name": "Dominik Wilkowski",
 		"email": "hi@dominik-wilkowski.com",

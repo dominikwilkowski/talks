@@ -9,7 +9,7 @@
 //                                                            ██║    ██║  ██║ ███████╗ ██║  ██╗ ███████║
 //                                                            ╚═╝    ╚═╝  ╚═╝ ╚══════╝ ╚═╝  ╚═╝ ╚══════╝
 //                                                                       Created by Dominik Wilkowski
-// @desc     Westpac talk
+// @desc     Talk A11Y
 // @author   Dominik Wilkowski
 // @website  https://github.com/dominikwilkowski/talks
 // @issues   https://github.com/dominikwilkowski/talks/issues
