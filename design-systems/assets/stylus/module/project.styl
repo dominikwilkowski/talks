@@ -1,0 +1,165 @@
+/***************************************************************************************************************************************************************
+ *
+ * Project styles
+ *
+ **************************************************************************************************************************************************************/
+
+.projects
+	position absolute
+	top 0
+	right 0
+	left 0
+	height 90vh
+
+	.project
+		position absolute
+		width 100px
+		height 100px
+
+		&.project-1
+			top 8vh
+			left 0
+			background #efefed
+			height auto
+			border-radius 50%
+			padding-top 50px
+			border 2px solid #ce4257
+			border-bottom 50px solid #ce4257
+
+			&:before
+			&:after
+				content ''
+				position absolute
+				top 26px
+				right 0
+				border 19px solid #ce4257
+				background #efefed
+				padding 6px
+				border-radius 50%
+
+			&:after
+				border-color #efefed
+				background #ce4257
+				right auto
+				left 0
+
+			&.is-animated
+				animation hue 2s infinite
+
+		&.project-2
+			top 48vh
+			left 64vw
+			background #440d0f
+			border-radius 50% / 60% 60% 40% 40%
+
+			&.is-animated
+				animation blubber 2s infinite
+
+		&.project-3
+			top 19vh
+			left 55vw
+			background #17bebb
+			border-radius 50%
+
+			&:after
+				content ''
+				position absolute
+				border-radius 50%
+				top 23px
+				left 29px
+				width 20px
+				height 20px
+				background #efefed
+
+			&:before
+				content ''
+				position absolute
+				right -10px
+				top 16px
+				border 40px solid transparent
+				border-left-width 0
+				border-right 60px solid #efefed
+
+			&.is-animated:before
+				animation mouth 0.5s infinite
+
+		&.project-4
+			top 48vh
+			left 7vw
+			background #ff9b54
+			transform rotateZ(20deg)
+
+			&:after
+				content ''
+				position absolute
+				top 0
+				left 0
+				width 100px
+				height 100px
+				background #ff9b54
+				transform rotateZ(135deg)
+
+			&.is-animated
+				animation rotate 5s linear infinite
+
+		&.project-5
+			top 68vh
+			left 32vw
+			width 50px
+			height 0
+			border 25px solid transparent
+			border-top-width 0
+			border-bottom-color #2176ff
+
+			&:after
+				content ''
+				position absolute
+				top 25px
+				left -25px
+				border 50px solid transparent
+				border-top 70px solid #2176ff
+				border-bottom-width 0
+
+			&.is-animated
+				animation grow 3s infinite
+
+
+@keyframes blubber
+	from,
+	to
+		border-radius 50% / 60% 60% 40% 40%
+
+	25%
+		border-radius 50% / 130% 60% 40% 40%
+
+	75%
+		border-radius 40% / 10% 50% 40% 80%
+
+
+@keyframes rotate
+	100%
+		transform rotateZ(380deg)
+
+@keyframes grow
+	from,
+	to
+		transform scale(1)
+
+	50%
+		transform scale(1.4)
+
+@keyframes mouth
+	from,
+	to
+		border-right-width 60px
+		right -10px
+
+	50%
+		border-right-width 150px
+		right -100px
+
+@keyframes hue
+	from
+		-webkit-filter hue-rotate(0deg)
+	to
+		-webkit-filter hue-rotate(-360deg)

@@ -1,0 +1,155 @@
+.reveal
+	background-color #efefed
+
+	li
+		font-size 2.25rem
+
+	.slide-headline
+		font-family 'Merriweather', serif
+		font-size 8.125rem
+
+		&.slide-headline-first
+			text-align left
+
+		&.slide-headline-small
+			font-size 4.375rem
+
+		&.slide-headline-smaller
+			font-size 3rem
+
+	.slide-text
+		font-size 2.5em
+		margin 1em 0
+
+	small
+		font-size 50%
+
+	strong
+		font-weight 900
+
+	.numbers
+		font-family sans-serif
+		font-weight normal
+
+	img
+		margin-top 1.875rem
+		max-width 100%
+
+	.slide-subline
+		font-family 'Merriweather', serif
+		font-size 1.875rem
+		text-align right
+
+		&.buffer
+			margin-top 20.75rem
+
+	.slide-list
+		list-style none
+		overflow hidden
+		font-size 0.75rem
+		text-align right
+
+		li
+			display inline-block
+			margin-right 0.75rem
+			font-size 1.25rem
+
+			&:after
+				content ','
+
+			&:last-child
+				margin-right 0
+
+				&:after
+					content ''
+
+	.linklist
+		display block
+		width 43rem
+		margin auto
+		text-align left
+
+		ul
+		ol
+			margin-left 1.25rem
+
+		li
+			margin 2rem 0
+
+			&:last-child
+				margin-right 0
+
+	.exchange-list
+		list-style none
+		margin 0.75rem auto
+		padding 0
+		position relative
+		min-height 37.5rem
+		width 60rem
+		max-width 100%
+
+		&> li
+			position absolute
+			top 0
+			left 0
+			right 0
+			text-align center
+
+	.center-list
+		list-style none
+		margin 0.75rem auto
+		width 43.75rem
+		max-width 100%
+
+	//underline 2.0
+	Text-underline-opacity = 20%;
+	Text-underline-color = #d5411f;
+	Text-underline-background-color = #efefed;
+	Text-underline-position = -0.20rem;
+	Text-underline-size = 0.04rem;
+	Text-underline-gap = 0.05em;
+	Text-underline-gap-minimum = 1.5px;
+
+	Text-underline-offset = Text-underline-position + Text-underline-size;
+
+	a
+		font-family 'Merriweather', serif
+		// font-style italic
+		font-weight normal
+		text-decoration none
+		color #d5411f
+		box-shadow inset 0 -0.15em 0 0 Text-underline-background-color,
+			inset 0 -0.23em 0 0 Text-underline-color
+
+		text-shadow 0.05em 0 Text-underline-background-color,
+			-0.05em 0 Text-underline-background-color,
+			1.5px 0 Text-underline-background-color,
+			-1.5px 0 Text-underline-background-color
+
+		&::selection
+			background-color #b3d4fc
+			color #d5411f
+			text-shadow none
+
+	em
+		font-family 'Merriweather', serif
+		font-style italic
+
+	pre
+		code
+			text-align left
+
+	ul
+	ol
+		ul
+		ol
+			margin-left 1.25rem
+
+	.notes
+		border 1px dotted #aaa
+		padding 0.75rem
+		font-size 16px
+		font-family sans-serif
+
+	.last
+		font-size 7rem
