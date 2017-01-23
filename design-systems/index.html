@@ -208,20 +208,30 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">Each module is a git submodule</h2>
 
-					<img class="fragment fade" src="assets/img/submodules.gif" alt="" style="width:450px">
+					<ul class="exchange-list">
+						<li class="fragment fade-in" data-fragment-index="0">
+							<img class="fragment fade-out" data-fragment-index="1" class="fragment fade" src="assets/img/submodules.gif" alt="" style="width:450px">
+						</li>
+						<li class="fragment fade-in" data-fragment-index="1">
 
-					<ul class="linklist">
-						<li class="fragment fade-up">
-							Each module is built/tested in isolation
-						</li>
-						<li class="fragment fade-up">
-							Clean git history for each module
-						</li>
-						<li class="fragment fade-up">
-							Working on several modules without merge conflicts
-						</li>
-						<li class="fragment fade-up">
-							One momorepo that manage them all
+							<ul class="linklist">
+								<li>
+									Each module is built/tested in isolation
+								</li>
+								<li class="fragment fade-up">
+									Clean git history for each module
+								</li>
+								<li class="fragment fade-up">
+									Coding without merge conflicts
+								</li>
+								<li class="fragment fade-up">
+									One momorepo that manages them all
+								</li>
+								<li class="fragment fade-up">
+									Staging <code>gh-pages</code> per module
+								</li>
+							</ul>
+
 						</li>
 					</ul>
 
@@ -277,6 +287,89 @@
 					<h2 class="slide-headline slide-headline-smaller">Change-logs FTW</h2>
 
 					<img src="assets/img/whatsnew.png" alt="">
+
+					<aside class="notes">
+						TODO
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">LESS</h2>
+
+					<ul class="exchange-list">
+						<li class="fragment fade-in" data-fragment-index="0">
+							<div class="fragment fade-out" data-fragment-index="1">
+								Everything in mixins
+
+								<pre><code class="less">
+._badges() {
+	.badge {
+		background-color: @background;
+	}
+}</code></pre>
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="1">
+							<div class="fragment fade-out" data-fragment-index="2">
+								Settings per variable
+
+								<pre><code class="less">
+@brand: WBC;
+
+._badges( @brand ) {
+
+	/*
+	 *  SETTINGS
+	 */
+	.getBrand() when (@brand = BOM) {
+		@background: #1f252c;
+	}
+	.getBrand() when (@brand = STG) {
+		@background: #78be20;
+	}
+	.getBrand() when (@brand = WBC) {
+		@background: #621a4b;
+	}
+	.getBrand();
+
+	.badge {
+		background-color: @background;
+	}
+}</code></pre>
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="2">
+							<div>
+								Lazy loading in less
+
+								<pre><code class="less">
+@brand: WBC;
+
+._badges( @brand ) {
+
+	/*
+	 *  SETTINGS
+	 */
+	.getBrand() when (@brand = BOM) {
+		@background: #1f252c;
+	}
+	.getBrand() when (@brand = STG) {
+		@background: #78be20;
+	}
+	.getBrand() when (@brand = WBC) {
+		@background: #621a4b;
+	}
+	.getBrand();
+
+	.badge {
+		background-color: @background;
+	}
+}
+
+@brand: STG;</code></pre>
+							</div>
+						</li>
+					</ul>
 
 					<aside class="notes">
 						TODO
@@ -350,6 +443,8 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">cli first</h2>
 
+					<img src="assets/img/pancake.png" alt="">
+
 					<aside class="notes">
 						TODO
 					</aside>
@@ -374,6 +469,8 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">Monorepo</h2>
 
+					<img src="assets/img/lerna.png" alt="">
+
 					<aside class="notes">
 						TODO
 					</aside>
@@ -382,6 +479,8 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">npm modules</h2>
 
+					<img src="assets/img/npm.png" alt="">
+
 					<aside class="notes">
 						TODO
 					</aside>
@@ -389,6 +488,8 @@
 
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">Flavors of modules</h2>
+
+					<img src="assets/img/flavors.png" alt="">
 
 					<aside class="notes">
 						TODO
@@ -405,6 +506,51 @@
 
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">Presets</h2>
+
+					<img src="assets/img/presets.png" alt="">
+
+					<aside class="notes">
+						TODO
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Sass</h2>
+
+					<ul class="exchange-list">
+						<li class="fragment fade-in" data-fragment-index="0">
+							<div class="fragment fade-out" data-fragment-index="1">
+								Split into variables and output
+
+								<img src="assets/img/sass.png" alt="">
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="1">
+							<div class="fragment fade-out" data-fragment-index="2">
+								Sass versioning
+
+								<pre><code class="scss">
+$name: "@gov.au/footer";
+$version: "0.1.6";
+$dependencies: (
+	("@gov.au/core", "0.1.0"),
+	("@gov.au/lists", "0.1.1"),
+);
+
+@include versioning-add( $name, $version, $dependencies );</code></pre>
+
+								<img src="assets/img/sass-versioning.png" alt="">
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="2">
+							<div>
+								TODO
+
+								<pre><code class="less">
+TODO</code></pre>
+							</div>
+						</li>
+					</ul>
 
 					<aside class="notes">
 						TODO
