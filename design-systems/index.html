@@ -298,19 +298,33 @@
 
 					<ul class="exchange-list">
 						<li class="fragment fade-in" data-fragment-index="0">
-							<div class="fragment fade-out" data-fragment-index="1">
+							<div class="fragment fade-out" data-fragment-index="3">
 								Everything in mixins
 
 								<pre><code class="less">
 ._badges() {
+	@badge-background: rebeccapurple;
+
 	.badge {
-		background-color: @background;
+		background-color: @badge-background;
 	}
+}</code></pre>
+
+								<pre class="fragment fade-in" data-fragment-index="1"><code class="less">
+@import (reference) "file-above.less";
+
+.badge-label {
+	color: @badge-background;
+}</code></pre>
+
+								<pre class="fragment fade-in" data-fragment-index="2"><code class="less">
+.badge-variation {
+	color: rebeccapurple;
 }</code></pre>
 							</div>
 						</li>
-						<li class="fragment fade-in" data-fragment-index="1">
-							<div class="fragment fade-out" data-fragment-index="2">
+						<li class="fragment fade-in" data-fragment-index="3">
+							<div class="fragment fade-out" data-fragment-index="4">
 								Settings per variable
 
 								<pre><code class="less">
@@ -338,7 +352,7 @@
 }</code></pre>
 							</div>
 						</li>
-						<li class="fragment fade-in" data-fragment-index="2">
+						<li class="fragment fade-in" data-fragment-index="4">
 							<div>
 								Lazy loading in less
 
@@ -526,7 +540,7 @@
 							</div>
 						</li>
 						<li class="fragment fade-in" data-fragment-index="1">
-							<div class="fragment fade-out" data-fragment-index="2">
+							<div class="fragment fade-out" data-fragment-index="3">
 								Sass versioning
 
 								<pre><code class="scss">
@@ -539,15 +553,33 @@ $dependencies: (
 
 @include versioning-add( $name, $version, $dependencies );</code></pre>
 
-								<img src="assets/img/sass-versioning.png" alt="">
+								<img class="fragment fade-in" data-fragment-index="2" src="assets/img/sass-versioning.png" alt="">
 							</div>
 						</li>
-						<li class="fragment fade-in" data-fragment-index="2">
+						<li class="fragment fade-in" data-fragment-index="3">
 							<div>
-								TODO
+								Awesome mixins, great error messages
 
 								<pre><code class="less">
-TODO</code></pre>
+/**
+ * Return a space value based on 4 and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of 4
+ * @return  {number}               - The space in em's
+ */
+@function uikit-core-space( $number ) {
+	@if type-of( $number ) != 'number' {
+		@error "Captain I'm giving it all she's got but: the uikit-core-space mixin only takes a number!";
+	}
+
+	@if type-of( $number ) == 'number' and not unitless( $number ) {
+		$number: $number / ($number * 0 + 1);
+	}
+
+	$space: $number * 4;
+
+	@return #{ $space }em;
+}</code></pre>
 							</div>
 						</li>
 					</ul>
