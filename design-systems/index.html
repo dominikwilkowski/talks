@@ -44,10 +44,6 @@
 						Tweets at <a href="//twitter.com/wilkowskidom">@wilkowskidom</a>
 					</li>
 				</ul>
-
-				<aside class="notes">
-					About me
-				</aside>
 			</section>
 
 
@@ -91,7 +87,8 @@
 					<img src="assets/img/old-GUI.png" alt="">
 
 					<aside class="notes">
-						TODO
+						When I started at Westpac, the team had already started building a sort-of design system. They had really strong design capabilities but not
+						much technical guidance.
 					</aside>
 				</section>
 
@@ -117,7 +114,7 @@
 					<aside class="notes">
 						Bootstrap comes with many elements that you don’t need, especially in a banking environment.
 						Each update to Bootstrap causes developers to feel they are outdated and now left with tech debt.
-						One solution here would be split bootstrap into modules but it’s architecture is too interwoven.
+						The performance is impacting all services
 						The last nail in the coffin is it’s not a11y compatible. That’s a no-no!
 					</aside>
 				</section>
@@ -126,8 +123,7 @@
 					<h2 class="slide-headline slide-headline-smaller">No open source</h2>
 
 					<aside class="notes">
-						At Westpac we have many products that are secure and sensitive. Each of those products are responsible for their own implementation and that
-						includes the front end. Downloading minified CSS and and js is hard to asses and put your name on it if you don’t know how it was built.
+						There was no-one working in open source at Westpac at all.
 					</aside>
 				</section>
 			</section>
@@ -143,7 +139,7 @@
 					<img src="assets/img/learning1.gif" alt="">
 
 					<aside class="notes">
-						TODO
+						After maintaining this for a little while we decided to take our learnings and build something new
 					</aside>
 				</section>
 
@@ -167,6 +163,8 @@
 					<h2 class="slide-headline slide-headline-smaller">Open source</h2>
 
 					<aside class="notes">
+						At Westpac we have many products that are secure and sensitive. Each of those products are responsible for their own implementation and that
+						includes the front end. Downloading minified CSS and and js is hard to asses and put your name on it if you don’t know how it was built.
 						It was important to keep ourself honest and show everyone what we build so project can make their own assessments.
 					</aside>
 				</section>
@@ -191,7 +189,7 @@
 					<img src="assets/img/GUI.png" alt="">
 
 					<aside class="notes">
-						TODO
+						And so we built the GUI framework and the blender.
 					</aside>
 				</section>
 
@@ -201,7 +199,7 @@
 					<img src="assets/img/collaboration.png" alt="">
 
 					<aside class="notes">
-						TODO
+						Everything was developed in the open and we had a good team working together to get it done.
 					</aside>
 				</section>
 
@@ -236,7 +234,7 @@
 					</ul>
 
 					<aside class="notes">
-						TODO
+						Git submodules are not popular but worked great for us. We created tooling to make it even easier.
 					</aside>
 				</section>
 
@@ -244,7 +242,7 @@
 					<h2 class="slide-headline slide-headline-smaller">Core modules hold reusable code</h2>
 
 					<aside class="notes">
-						TODO
+						We created five core modules that were included in every blend. javascript, grid, colors, text-styling and fonts
 					</aside>
 				</section>
 
@@ -279,7 +277,8 @@
 					</ul>
 
 					<aside class="notes">
-						TODO
+						The blender would compile the assets in memory and sent you a zip file. It would generate a version string for you so you can always return to your
+						blend. To make the interaction with the tool more fun, we created funky timely options.
 					</aside>
 				</section>
 
@@ -289,7 +288,8 @@
 					<img src="assets/img/whatsnew.png" alt="">
 
 					<aside class="notes">
-						TODO
+						As we created changelogs for each version and we tried to rapidly release new version we had a lot of changelogs to communicate. Slack inspired us
+						to be more entertaining with them. It actually made a very noticeable difference in who and how people engaged with us.
 					</aside>
 				</section>
 
@@ -386,7 +386,7 @@
 					</ul>
 
 					<aside class="notes">
-						TODO
+						We used less. Because bootstrap. Less comes with great features like referenced imports and lazy loading variables.
 					</aside>
 				</section>
 			</section>
@@ -402,7 +402,7 @@
 					<img src="assets/img/learning2.gif" alt="">
 
 					<aside class="notes">
-						TODO
+						I have now moved on to the Australian Government and am asked to build a design system here.
 					</aside>
 				</section>
 
@@ -410,7 +410,7 @@
 					<h2 class="slide-headline slide-headline-smaller">5 core modules are 4 too many</h2>
 
 					<aside class="notes">
-						TODO
+						It makes the dependency graph unnecessarily complicated.
 					</aside>
 				</section>
 
@@ -418,7 +418,7 @@
 					<h2 class="slide-headline slide-headline-smaller">Nothing is ever small enough</h2>
 
 					<aside class="notes">
-						TODO
+						Our icon groups were too big with 6 icons.
 					</aside>
 				</section>
 
@@ -426,7 +426,7 @@
 					<h2 class="slide-headline slide-headline-smaller">Dependencies need more juice</h2>
 
 					<aside class="notes">
-						TODO
+						Interdependencies have not been solved and it meant we started building either bigger modules or repeated ourself.
 					</aside>
 				</section>
 
@@ -434,7 +434,7 @@
 					<h2 class="slide-headline slide-headline-smaller">FOSS needs marketing</h2>
 
 					<aside class="notes">
-						TODO
+						Open source is all about marketing. The greatest projects have died because they weren't shiny enough.
 					</aside>
 				</section>
 			</section>
@@ -450,7 +450,7 @@
 					<img src="assets/img/uikit.png" alt="">
 
 					<aside class="notes">
-						TODO
+						At the DTA we are building the new uikit.
 					</aside>
 				</section>
 
@@ -460,7 +460,7 @@
 					<img src="assets/img/pancake.png" alt="">
 
 					<aside class="notes">
-						TODO
+						Building cli first now means we can progressively enhance the experience.
 					</aside>
 				</section>
 
@@ -468,7 +468,7 @@
 					<h2 class="slide-headline slide-headline-smaller">One core only</h2>
 
 					<aside class="notes">
-						TODO
+						One core, simple, straight forward, less assumptions.
 					</aside>
 				</section>
 
@@ -476,7 +476,7 @@
 					<h2 class="slide-headline slide-headline-smaller">No output for core</h2>
 
 					<aside class="notes">
-						TODO
+						Size impact at an absolute minimum.
 					</aside>
 				</section>
 
@@ -486,7 +486,7 @@
 					<img src="assets/img/lerna.png" alt="">
 
 					<aside class="notes">
-						TODO
+						We are trying out lerna but are still early in the process. Not because submodules are bad, just to learn something new again.
 					</aside>
 				</section>
 
@@ -496,7 +496,7 @@
 					<img src="assets/img/npm.png" alt="">
 
 					<aside class="notes">
-						TODO
+						Delivery and dependencies solved. Now we just need to make sure yarn is supported.
 					</aside>
 				</section>
 
@@ -506,15 +506,15 @@
 					<img src="assets/img/flavors.png" alt="">
 
 					<aside class="notes">
-						TODO
+						With interdependencies out of the way we can build flavors of modules.
 					</aside>
 				</section>
 
 				<section data-transition="fade-out">
-					<h2 class="slide-headline slide-headline-smaller">Support for react, Angular etc</h2>
+					<h2 class="slide-headline slide-headline-smaller">Support for react, vue etc</h2>
 
 					<aside class="notes">
-						TODO
+						Templates should enable us to scale but we start with vanilla.
 					</aside>
 				</section>
 
@@ -524,7 +524,7 @@
 					<img src="assets/img/presets.png" alt="">
 
 					<aside class="notes">
-						TODO
+						Npm comes with presets built in. Like babel we can now have a set for e.g. annual reports.
 					</aside>
 				</section>
 
@@ -567,9 +567,9 @@ $dependencies: (
  * @param  {number} $number - The space as a multiplier of 4
  * @return  {number}               - The space in em's
  */
-@function uikit-core-space( $number ) {
+@function uikit-space( $number ) {
 	@if type-of( $number ) != 'number' {
-		@error "Captain I'm giving it all she's got but: the uikit-core-space mixin only takes a number!";
+		@error "Captain I'm giving it all she's got but: the uikit-space mixin only takes a number!";
 	}
 
 	@if type-of( $number ) == 'number' and not unitless( $number ) {
@@ -585,7 +585,8 @@ $dependencies: (
 					</ul>
 
 					<aside class="notes">
-						TODO
+						Moving to Sass we also thrive to make things simpler. Using mixins for everything does seem like a hack. Here too we have an eye on the details
+						and make interacting with us fun.
 					</aside>
 				</section>
 			</section>
