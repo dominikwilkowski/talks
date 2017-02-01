@@ -84,7 +84,7 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-small">What we started with</h2>
 
-					<img src="assets/img/old-GUI.png" alt="">
+					<img src="assets/img/old-GUI.png" alt="TODO">
 
 					<aside class="notes">
 						When I started at Westpac, the team had already started building a sort-of design system. They had really strong design capabilities but not
@@ -101,7 +101,7 @@
 						</li>
 						<li class="fragment fade-up">
 							Upgrade anxiety
-							<img class="fragment fade-up" src="assets/img/anxiety.gif" alt="">
+							<img class="fragment fade-up" src="assets/img/anxiety.gif" alt="TODO">
 						</li>
 						<li class="fragment fade-up">
 							Monolithic CSS
@@ -114,7 +114,7 @@
 					<aside class="notes">
 						Bootstrap comes with many elements that you don’t need, especially in a banking environment.
 						Each update to Bootstrap causes developers to feel they are outdated and now left with tech debt.
-						The performance is impacting all services
+						The performance is impacting all services, monolithic CSS comes with monolithic LESS settings.
 						The last nail in the coffin is it’s not a11y compatible. That’s a no-no!
 					</aside>
 				</section>
@@ -136,7 +136,7 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-small">What we learned #1</h2>
 
-					<img src="assets/img/learning1.gif" alt="">
+					<img src="assets/img/learning1.gif" alt="TODO">
 
 					<aside class="notes">
 						After maintaining this for a little while we decided to take our learnings and build something new
@@ -186,7 +186,7 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-small">What we built then</h2>
 
-					<img src="assets/img/GUI.png" alt="">
+					<img src="assets/img/GUI.png" alt="TODO">
 
 					<aside class="notes">
 						And so we built the GUI framework and the blender.
@@ -196,7 +196,7 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">Everything’s open source</h2>
 
-					<img src="assets/img/collaboration.png" alt="">
+					<img src="assets/img/collaboration.png" alt="TODO">
 
 					<aside class="notes">
 						Everything was developed in the open and we had a good team working together to get it done.
@@ -208,7 +208,7 @@
 
 					<ul class="exchange-list">
 						<li class="fragment fade-in" data-fragment-index="0">
-							<img class="fragment fade-out" data-fragment-index="1" class="fragment fade" src="assets/img/submodules.gif" alt="" style="width:450px">
+							<img class="fragment fade-out" data-fragment-index="1" class="fragment fade" src="assets/img/submodules.gif" alt="TODO" style="width:450px">
 						</li>
 						<li class="fragment fade-in" data-fragment-index="1">
 
@@ -220,13 +220,16 @@
 									Clean git history for each module
 								</li>
 								<li class="fragment fade-up">
-									Coding without merge conflicts
+									Coding without merge conflicts <img class="smiley" src="assets/img/trollface.png" alt="TODO" style="height:30px; margin:0;">
 								</li>
 								<li class="fragment fade-up">
 									One momorepo that manages them all
 								</li>
 								<li class="fragment fade-up">
 									Staging <code>gh-pages</code> per module
+								</li>
+								<li class="fragment fade-up">
+									Test with older versions
 								</li>
 							</ul>
 
@@ -239,7 +242,9 @@
 				</section>
 
 				<section data-transition="fade-out">
-					<h2 class="slide-headline slide-headline-smaller">Core modules hold reusable code</h2>
+					<h2 class="slide-headline slide-headline-smaller">Testing with older versions</h2>
+
+					<a href="http://westpaccxteam.github.io/GUI-source/"><img src="assets/img/older-versions.png" alt="TODO"></a>
 
 					<aside class="notes">
 						We created five core modules that were included in every blend. javascript, grid, colors, text-styling and fonts
@@ -253,25 +258,25 @@
 						<li class="fragment fade-in" data-fragment-index="0">
 							<div class="fragment fade-out" data-fragment-index="1">
 								Build your assets online and download a zip
-								<img src="assets/img/blender-download.gif" alt="">
+								<img src="assets/img/blender-download.gif" alt="TODO">
 							</div>
 						</li>
 						<li class="fragment fade-in" data-fragment-index="1">
 							<div class="fragment fade-out" data-fragment-index="2">
 								Each zip file comes with a "version string"
-								<img src="assets/img/blender-string.png" alt="">
+								<img src="assets/img/blender-string.png" alt="TODO">
 							</div>
 						</li>
 						<li class="fragment fade-in" data-fragment-index="2">
 							<div class="fragment fade-out" data-fragment-index="3">
 								Return to your version anytime
-								<img src="assets/img/blender-return.png" alt="">
+								<img src="assets/img/blender-return.png" alt="TODO">
 							</div>
 						</li>
 						<li class="fragment fade-in" data-fragment-index="3">
 							<div>
 								Funky add-ons for engagement and smiles
-								<img src="assets/img/blender-funky.jpg" alt="">
+								<img src="assets/img/blender-funky.jpg" alt="TODO">
 							</div>
 						</li>
 					</ul>
@@ -285,7 +290,7 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">Change-logs FTW</h2>
 
-					<img src="assets/img/whatsnew.png" alt="">
+					<img src="assets/img/whatsnew.png" alt="TODO">
 
 					<aside class="notes">
 						As we created changelogs for each version and we tried to rapidly release new version we had a lot of changelogs to communicate. Slack inspired us
@@ -325,7 +330,7 @@
 						</li>
 						<li class="fragment fade-in" data-fragment-index="3">
 							<div class="fragment fade-out" data-fragment-index="4">
-								Settings per variable
+								Settings per module via a var
 
 								<pre><code class="less">
 @brand: WBC;
@@ -399,7 +404,7 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-small">What we learned #2</h2>
 
-					<img src="assets/img/learning2.gif" alt="">
+					<img src="assets/img/learning2.gif" alt="TODO">
 
 					<aside class="notes">
 						I have now moved on to the Australian Government and am asked to build a design system here.
@@ -409,6 +414,8 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">5 core modules are 4 too many</h2>
 
+					<img src="assets/img/core.png" alt="TODO">
+
 					<aside class="notes">
 						It makes the dependency graph unnecessarily complicated.
 					</aside>
@@ -416,6 +423,8 @@
 
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">Nothing is ever small enough</h2>
+
+					<img src="assets/img/icons.png" alt="TODO">
 
 					<aside class="notes">
 						Our icon groups were too big with 6 icons.
@@ -433,6 +442,8 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">FOSS needs marketing</h2>
 
+					<img src="assets/img/empty.gif" alt="TODO">
+
 					<aside class="notes">
 						Open source is all about marketing. The greatest projects have died because they weren't shiny enough.
 					</aside>
@@ -447,7 +458,7 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-small">What we’re building now</h2>
 
-					<img src="assets/img/uikit.png" alt="">
+					<img src="assets/img/uikit.png" alt="TODO">
 
 					<aside class="notes">
 						At the DTA we are building the new uikit.
@@ -457,7 +468,7 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">cli first</h2>
 
-					<img src="assets/img/pancake.png" alt="">
+					<img src="assets/img/pancake.png" alt="TODO">
 
 					<aside class="notes">
 						Building cli first now means we can progressively enhance the experience.
@@ -483,7 +494,7 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">Monorepo</h2>
 
-					<img src="assets/img/lerna.png" alt="">
+					<img src="assets/img/lerna.png" alt="TODO">
 
 					<aside class="notes">
 						We are trying out lerna but are still early in the process. Not because submodules are bad, just to learn something new again.
@@ -493,7 +504,7 @@
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">npm modules</h2>
 
-					<img src="assets/img/npm.png" alt="">
+					<img src="assets/img/npm.png" alt="TODO">
 
 					<aside class="notes">
 						Delivery and dependencies solved. Now we just need to make sure yarn is supported.
@@ -501,27 +512,67 @@
 				</section>
 
 				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">peerDependencies</h2>
+
+					<img src="assets/img/pancake-peerdependencies.png" alt="TODO">
+
+					<aside class="notes">
+						TODO
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">pancake</h2>
+
+					<ul class="exchange-list">
+						<li class="fragment fade-in" data-fragment-index="0">
+							<div class="fragment fade-out" data-fragment-index="1">
+								Batter
+
+								<img class="fragment fade-in" data-fragment-index="0" src="assets/img/pancake-batter.gif" alt="TODO">
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="1">
+							<div class="fragment fade-out" data-fragment-index="2">
+								Syrup
+
+								<img class="fragment fade-in" data-fragment-index="1" src="assets/img/pancake-syrup.gif" alt="TODO">
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="2">
+							Cream
+
+							<img class="fragment fade-in" data-fragment-index="2" src="assets/img/pancake-cream.gif" alt="TODO">
+						</li>
+					</ul>
+
+					<aside class="notes">
+						TODO
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">Flavors of modules</h2>
 
-					<img src="assets/img/flavors.png" alt="">
+					<img src="assets/img/flavors.png" alt="TODO">
 
 					<aside class="notes">
 						With interdependencies out of the way we can build flavors of modules.
 					</aside>
 				</section>
 
-				<section data-transition="fade-out">
+				<!-- <section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">Support for react, vue etc</h2>
 
 					<aside class="notes">
 						Templates should enable us to scale but we start with vanilla.
 					</aside>
-				</section>
+				</section> -->
 
 				<section data-transition="fade-out">
 					<h2 class="slide-headline slide-headline-smaller">Presets</h2>
 
-					<img src="assets/img/presets.png" alt="">
+					<img src="assets/img/presets.png" alt="TODO">
 
 					<aside class="notes">
 						Npm comes with presets built in. Like babel we can now have a set for e.g. annual reports.
@@ -536,7 +587,7 @@
 							<div class="fragment fade-out" data-fragment-index="1">
 								Split into variables and output
 
-								<img src="assets/img/sass.png" alt="">
+								<img src="assets/img/sass.png" alt="TODO">
 							</div>
 						</li>
 						<li class="fragment fade-in" data-fragment-index="1">
@@ -553,7 +604,7 @@ $dependencies: (
 
 @include versioning-add( $name, $version, $dependencies );</code></pre>
 
-								<img class="fragment fade-in" data-fragment-index="2" src="assets/img/sass-versioning.png" alt="">
+								<img class="fragment fade-in" data-fragment-index="2" src="assets/img/sass-versioning.png" alt="TODO">
 							</div>
 						</li>
 						<li class="fragment fade-in" data-fragment-index="3">
