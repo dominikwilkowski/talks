@@ -1,16 +1,16 @@
-html,
-body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-	font-size: 1.2rem;
-	line-height: 1.2;
-	font-weight: 400;
-}
-
 .reveal {
+	// html,
+	// body {
+	// 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	// 	font-size: 1.2rem;
+	// 	line-height: 1.2;
+	// 	font-weight: 400;
+	// }
+
 	h1 {
-		font-size: 2rem;
+		font-size: 3.5rem;
 		font-weight: 900;
-		margin-bottom: 1.5rem;
+		margin-bottom: 2.5rem;
 	}
 
 	p,
@@ -21,7 +21,7 @@ body {
 	}
 
 	ul {
-		max-width: 40%;
+		max-width: 70%;
 	}
 
 	li {
