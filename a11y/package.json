@@ -36,9 +36,9 @@
 	},
 	"licenses": [
 		{
-			"type": "GPL-2.0",
+			"type": "GPL-3.0",
 			"url": "https://github.com/dominikwilkowski/talks/blob/master/LICENSE"
 		}
 	],
-	"license": "GPL-2.0"
+	"license": "GPL-3.0"
 }
