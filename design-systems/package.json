@@ -1,8 +1,8 @@
 {
-	"name": "talk-a11y",
+	"name": "talk-design-systems",
 	"version": "0.0.1",
-	"description": "Talk A11y",
-	"homepage": "http://dominikwilkowski.github.io/talks/a11y",
+	"description": "Talk Design Systems",
+	"homepage": "http://dominikwilkowski.github.io/talks/design-systems",
 	"author": {
 		"name": "Dominik Wilkowski",
 		"email": "hi@dominik-wilkowski.com",
@@ -22,12 +22,12 @@
 		"socket.io": "~1.4.8"
 	},
 	"devDependencies": {
-		"autoprefixer-stylus": "^0.9.3",
+		"autoprefixer-stylus": "^0.10.0",
 		"grunt": "^1.0.1",
 		"grunt-contrib-concat": "^1.0.1",
 		"grunt-contrib-connect": "~1.0.2",
 		"grunt-contrib-stylus": "^1.2.0",
-		"grunt-contrib-uglify": "^1.0.1",
+		"grunt-contrib-uglify": "^2.0.0",
 		"grunt-contrib-watch": "~1.0.0",
 		"grunt-font": "0.0.13",
 		"grunt-grunticon": "^2.2.2",

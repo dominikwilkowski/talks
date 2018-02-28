@@ -1,0 +1,49 @@
+{
+	"name": "design-system-meetup",
+	"version": "0.1.0",
+	"description": "Design Systems Meetup",
+	"homepage": "http://dominikwilkowski.github.io/talks/design-systems",
+	"author": {
+		"name": "Dominik Wilkowski",
+		"email": "hi@dominik-wilkowski.com",
+		"web": "http://dominik-wilkowski.com/"
+	},
+	"scripts": {
+		"intro": "cfonts \"Talks\" -c red,blue -s -a center && cfonts \"~ Build ready ~\" -f console -a center -s -c candy",
+		"build:sass": "mkdir -p assets/css/ && node-sass --output-style compressed -o assets/css src/sass/style.scss",
+		"build:autoprefix": "postcss assets/css/style.css -u autoprefixer -r --no-map",
+		"build:css": "npm run build:sass && npm run build:autoprefix",
+		"build:concat": "concat-cli -f src/js/*.js -o assets/js/script.min.js",
+		"build:uglify": "uglifyjs assets/js/script.min.js --compres --output assets/js/script.min.js",
+		"build:js": "npm run build:concat && npm run build:uglify",
+		"build": "npm run build:css && npm run build:js && npm run intro",
+		"server": "browser-sync start --server './' --files './index.html' 'assets/'",
+		"watch:sass": "onchange 'src/sass/*.scss' 'src/sass/**/*.scss' -- npm run build:css",
+		"watch:js": "onchange 'src/js/*.js' 'src/js/**/*.js' -- npm run build:js",
+		"watch": "npm run build && npm-run-all --parallel server watch:*",
+		"test": "echo 'Error: no test specified' && exit 0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/dominikwilkowski/talks.git"
+	},
+	"dependencies": {
+		"autoprefixer": "^8.0.0",
+		"browser-sync": "^2.23.6",
+		"cfonts": "^1.1.3",
+		"concat-cli": "^4.0.0",
+		"node-sass": "^4.7.2",
+		"npm-run-all": "^4.1.2",
+		"onchange": "^3.3.0",
+		"postcss-cli": "^5.0.0",
+		"uglify-js": "^3.3.12"
+	},
+	"devDependencies": {},
+	"licenses": [
+		{
+			"type": "GPL-3.0",
+			"url": "https://github.com/dominikwilkowski/talks/blob/master/LICENSE"
+		}
+	],
+	"license": "GPL-3.0"
+}

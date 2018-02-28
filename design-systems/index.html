@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width">
+
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/site.min.css">
+
+	<title>On Design Systems</title>
+</head>
+<body>
+
+	<div class="reveal">
+		<div class="slides">
+
+			<!-- *****************************************************************************************************************************************************
+			*  INTRO
+			****************************************************************************************************************************************************** -->
+			<section id="headline">
+				<h1 class="slide-headline slide-headline-small slide-headline-first">
+					On Design Systems<br>
+					<small>... or what I learned building them</small>
+				</h1>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  ABOUT
+			****************************************************************************************************************************************************** -->
+			<section id="about">
+				<h2 class="slide-headline slide-headline-small">👋 My name is Dominik</h2>
+
+				<ul class="linklist">
+					<li>
+						Currently with <a href="https://www.dta.gov.au/">DTA</a>
+					</li>
+					<li>
+						Previously at <a href="https://gel.westpacgroup.com.au/">Westpac GEL</a>
+					</li>
+					<li>
+						Tweets at <a href="//twitter.com/wilkowskidom">@wilkowskidom</a>
+					</li>
+				</ul>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  CONTENT
+			****************************************************************************************************************************************************** -->
+			<section id="content">
+				<h2 class="slide-headline slide-headline-small">Content</h2>
+
+				<ol class="linklist">
+					<li>
+						<a href="#started">What we started with at Westpac</a>
+					</li>
+					<li>
+						<a href="#learned1">What we learned #1</a>
+					</li>
+					<li>
+						<a href="#built-then">What we built then</a>
+					</li>
+					<li>
+						<a href="#learned2">What we learned #2</a>
+					</li>
+					<li>
+						<a href="#building-now">What we are building now at the DTA</a>
+					</li>
+				</ol>
+
+				<aside class="notes">
+					Stuff we cover
+				</aside>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  WHAT WE STARTED WITH AT WESTPAC
+			****************************************************************************************************************************************************** -->
+			<section id="started">
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-small">What we started with</h2>
+
+					<img src="assets/img/old-GUI.png" alt="TODO">
+
+					<aside class="notes">
+						When I started at Westpac, the team had already started building a sort-of design system. They had really strong design capabilities but not
+						much technical guidance.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Bootstrap 3 fork</h2>
+
+					<ol class="linklist">
+						<li class="fragment fade-up">
+							Answers to questions you didn’t ask
+						</li>
+						<li class="fragment fade-up">
+							Upgrade anxiety
+							<img class="fragment fade-up" src="assets/img/anxiety.gif" alt="TODO">
+						</li>
+						<li class="fragment fade-up">
+							Monolithic CSS
+						</li>
+						<li class="fragment fade-up">
+							Not a11y
+						</li>
+					</ol>
+
+					<aside class="notes">
+						Bootstrap comes with many elements that you don’t need, especially in a banking environment.
+						Each update to Bootstrap causes developers to feel they are outdated and now left with tech debt.
+						The performance is impacting all services, monolithic CSS comes with monolithic LESS settings.
+						The last nail in the coffin is it’s not a11y compatible. That’s a no-no!
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">No open source</h2>
+
+					<aside class="notes">
+						There was no-one working in open source at Westpac at all.
+					</aside>
+				</section>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  WHAT WE LEARNED #1
+			****************************************************************************************************************************************************** -->
+			<section id="learned1">
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-small">What we learned #1</h2>
+
+					<img src="assets/img/learning1.gif" alt="TODO">
+
+					<aside class="notes">
+						After maintaining this for a little while we decided to take our learnings and build something new
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Modules</h2>
+
+					<aside class="notes">
+						We decide what is defined as a module and build those in isolation.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Version each module independently</h2>
+
+					<aside class="notes">
+						This enables everyone to pick and chose what they need and greater transparency into what has changed.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Open source</h2>
+
+					<aside class="notes">
+						At Westpac we have many products that are secure and sensitive. Each of those products are responsible for their own implementation and that
+						includes the front end. Downloading minified CSS and and js is hard to asses and put your name on it if you don’t know how it was built.
+						It was important to keep ourself honest and show everyone what we build so project can make their own assessments.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Clear upgrade paths</h2>
+
+					<aside class="notes">
+						With modular versioned modules, everyone can chose to upgrade module by module at the pace the projects time and financial commitment allows.
+					</aside>
+				</section>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  WHAT WE BUILT THEN
+			****************************************************************************************************************************************************** -->
+			<section id="built-then">
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-small">What we built then</h2>
+
+					<img src="assets/img/GUI.png" alt="TODO">
+
+					<aside class="notes">
+						And so we built the GUI framework and the blender.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Everything’s open source</h2>
+
+					<img src="assets/img/collaboration.png" alt="TODO">
+
+					<aside class="notes">
+						Everything was developed in the open and we had a good team working together to get it done.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Each module is a git submodule</h2>
+
+					<ul class="exchange-list">
+						<li class="fragment fade-in" data-fragment-index="0">
+							<img class="fragment fade-out" data-fragment-index="1" class="fragment fade" src="assets/img/submodules.gif" alt="TODO" style="width:450px">
+						</li>
+						<li class="fragment fade-in" data-fragment-index="1">
+
+							<ul class="linklist">
+								<li>
+									Each module is built/tested in isolation
+								</li>
+								<li class="fragment fade-up">
+									Clean git history for each module
+								</li>
+								<li class="fragment fade-up">
+									Coding without merge conflicts <img class="smiley" src="assets/img/trollface.png" alt="TODO" style="height:30px; margin:0;">
+								</li>
+								<li class="fragment fade-up">
+									One momorepo that manages them all
+								</li>
+								<li class="fragment fade-up">
+									Staging <code>gh-pages</code> per module
+								</li>
+								<li class="fragment fade-up">
+									Test with older versions
+								</li>
+							</ul>
+
+						</li>
+					</ul>
+
+					<aside class="notes">
+						Git submodules are not popular but worked great for us. We created tooling to make it even easier.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Testing with older versions</h2>
+
+					<a href="http://westpaccxteam.github.io/GUI-source/"><img src="assets/img/older-versions.png" alt="TODO"></a>
+
+					<aside class="notes">
+						We created five core modules that were included in every blend. javascript, grid, colors, text-styling and fonts
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">The blender</h2>
+
+					<ul class="exchange-list">
+						<li class="fragment fade-in" data-fragment-index="0">
+							<div class="fragment fade-out" data-fragment-index="1">
+								Build your assets online and download a zip
+								<img src="assets/img/blender-download.gif" alt="TODO">
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="1">
+							<div class="fragment fade-out" data-fragment-index="2">
+								Each zip file comes with a "version string"
+								<img src="assets/img/blender-string.png" alt="TODO">
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="2">
+							<div class="fragment fade-out" data-fragment-index="3">
+								Return to your version anytime
+								<img src="assets/img/blender-return.png" alt="TODO">
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="3">
+							<div>
+								Funky add-ons for engagement and smiles
+								<img src="assets/img/blender-funky.jpg" alt="TODO">
+							</div>
+						</li>
+					</ul>
+
+					<aside class="notes">
+						The blender would compile the assets in memory and sent you a zip file. It would generate a version string for you so you can always return to your
+						blend. To make the interaction with the tool more fun, we created funky timely options.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Change-logs FTW</h2>
+
+					<img src="assets/img/whatsnew.png" alt="TODO">
+
+					<aside class="notes">
+						As we created changelogs for each version and we tried to rapidly release new version we had a lot of changelogs to communicate. Slack inspired us
+						to be more entertaining with them. It actually made a very noticeable difference in who and how people engaged with us.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">LESS</h2>
+
+					<ul class="exchange-list">
+						<li class="fragment fade-in" data-fragment-index="0">
+							<div class="fragment fade-out" data-fragment-index="3">
+								Everything in mixins
+
+								<pre><code class="less">
+._badges() {
+	@badge-background: rebeccapurple;
+
+	.badge {
+		background-color: @badge-background;
+	}
+}</code></pre>
+
+								<pre class="fragment fade-in" data-fragment-index="1"><code class="less">
+@import (reference) "file-above.less";
+
+.badge-label {
+	color: @badge-background;
+}</code></pre>
+
+								<pre class="fragment fade-in" data-fragment-index="2"><code class="less">
+.badge-variation {
+	color: rebeccapurple;
+}</code></pre>
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="3">
+							<div class="fragment fade-out" data-fragment-index="4">
+								Settings per module via a var
+
+								<pre><code class="less">
+@brand: WBC;
+
+._badges( @brand ) {
+
+	/*
+	 *  SETTINGS
+	 */
+	.getBrand() when (@brand = BOM) {
+		@background: #1f252c;
+	}
+	.getBrand() when (@brand = STG) {
+		@background: #78be20;
+	}
+	.getBrand() when (@brand = WBC) {
+		@background: #621a4b;
+	}
+	.getBrand();
+
+	.badge {
+		background-color: @background;
+	}
+}</code></pre>
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="4">
+							<div>
+								Lazy loading in less
+
+								<pre><code class="less">
+@brand: WBC;
+
+._badges( @brand ) {
+
+	/*
+	 *  SETTINGS
+	 */
+	.getBrand() when (@brand = BOM) {
+		@background: #1f252c;
+	}
+	.getBrand() when (@brand = STG) {
+		@background: #78be20;
+	}
+	.getBrand() when (@brand = WBC) {
+		@background: #621a4b;
+	}
+	.getBrand();
+
+	.badge {
+		background-color: @background;
+	}
+}
+
+@brand: STG;</code></pre>
+							</div>
+						</li>
+					</ul>
+
+					<aside class="notes">
+						We used less. Because bootstrap. Less comes with great features like referenced imports and lazy loading variables.
+					</aside>
+				</section>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  WHAT WE LEARNED #2
+			****************************************************************************************************************************************************** -->
+			<section id="learned2">
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-small">What we learned #2</h2>
+
+					<img src="assets/img/learning2.gif" alt="TODO">
+
+					<aside class="notes">
+						I have now moved on to the Australian Government and am asked to build a design system here.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">5 core modules are 4 too many</h2>
+
+					<img src="assets/img/core.png" alt="TODO">
+
+					<aside class="notes">
+						It makes the dependency graph unnecessarily complicated.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Nothing is ever small enough</h2>
+
+					<img src="assets/img/icons.png" alt="TODO">
+
+					<aside class="notes">
+						Our icon groups were too big with 6 icons.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Dependencies need more juice</h2>
+
+					<aside class="notes">
+						Interdependencies have not been solved and it meant we started building either bigger modules or repeated ourself.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">FOSS needs marketing</h2>
+
+					<img src="assets/img/empty.gif" alt="TODO">
+
+					<aside class="notes">
+						Open source is all about marketing. The greatest projects have died because they weren't shiny enough.
+					</aside>
+				</section>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  WHAT WE ARE BUILDING NOW AT THE DTA
+			****************************************************************************************************************************************************** -->
+			<section id="building-now">
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-small">What we’re building now</h2>
+
+					<img src="assets/img/uikit.png" alt="TODO">
+
+					<aside class="notes">
+						At the DTA we are building the new uikit.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">cli first</h2>
+
+					<img src="assets/img/pancake.png" alt="TODO">
+
+					<aside class="notes">
+						Building cli first now means we can progressively enhance the experience.
+					</aside>
+				</section>
+
+				<!-- <section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">One core only</h2>
+
+					<aside class="notes">
+						One core, simple, straight forward, less assumptions.
+					</aside>
+				</section> -->
+
+				<!-- <section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">No output for core</h2>
+
+					<aside class="notes">
+						Size impact at an absolute minimum.
+					</aside>
+				</section> -->
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Monorepo</h2>
+
+					<img src="assets/img/lerna.png" alt="TODO">
+
+					<aside class="notes">
+						We are trying out lerna but are still early in the process. Not because submodules are bad, just to learn something new again.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">npm modules</h2>
+
+					<img src="assets/img/npm.png" alt="TODO">
+
+					<aside class="notes">
+						Delivery and dependencies solved. Now we just need to make sure yarn is supported.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">peerDependencies</h2>
+
+					<img src="assets/img/pancake-peerdependencies.png" alt="TODO">
+
+					<aside class="notes">
+						TODO
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">pancake</h2>
+
+					<ul class="exchange-list">
+						<li class="fragment fade-in" data-fragment-index="0">
+							<div class="fragment fade-out" data-fragment-index="1">
+								Batter
+
+								<img class="fragment fade-in" data-fragment-index="0" src="assets/img/pancake-batter.gif" alt="TODO">
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="1">
+							<div class="fragment fade-out" data-fragment-index="2">
+								Syrup
+
+								<img class="fragment fade-in" data-fragment-index="1" src="assets/img/pancake-syrup.gif" alt="TODO">
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="2">
+							Cream
+
+							<img class="fragment fade-in" data-fragment-index="2" src="assets/img/pancake-cream.gif" alt="TODO">
+						</li>
+					</ul>
+
+					<aside class="notes">
+						TODO
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Flavors of modules</h2>
+
+					<img src="assets/img/flavors.png" alt="TODO">
+
+					<aside class="notes">
+						With interdependencies out of the way we can build flavors of modules.
+					</aside>
+				</section>
+
+				<!-- <section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Support for react, vue etc</h2>
+
+					<aside class="notes">
+						Templates should enable us to scale but we start with vanilla.
+					</aside>
+				</section> -->
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Presets</h2>
+
+					<img src="assets/img/presets.png" alt="TODO">
+
+					<aside class="notes">
+						Npm comes with presets built in. Like babel we can now have a set for e.g. annual reports.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">Sass</h2>
+
+					<ul class="exchange-list">
+						<li class="fragment fade-in" data-fragment-index="0">
+							<div class="fragment fade-out" data-fragment-index="1">
+								Split into variables and output
+
+								<img src="assets/img/sass.png" alt="TODO">
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="1">
+							<div class="fragment fade-out" data-fragment-index="3">
+								Sass versioning
+
+								<pre><code class="scss">
+$name: "@gov.au/footer";
+$version: "0.1.6";
+$dependencies: (
+	("@gov.au/core", "0.1.0"),
+	("@gov.au/lists", "0.1.1"),
+);
+
+@include versioning-add( $name, $version, $dependencies );</code></pre>
+
+								<img class="fragment fade-in" data-fragment-index="2" src="assets/img/sass-versioning.png" alt="TODO">
+							</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="3">
+							<div>
+								Awesome mixins, great error messages
+
+								<pre><code class="less">
+/**
+ * Return a space value based on 4 and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of 4
+ * @return  {number}               - The space in em's
+ */
+@function uikit-space( $number ) {
+	@if type-of( $number ) != 'number' {
+		@error "Captain I'm giving it all she's got but: the uikit-space mixin only takes a number!";
+	}
+
+	@if type-of( $number ) == 'number' and not unitless( $number ) {
+		$number: $number / ($number * 0 + 1);
+	}
+
+	$space: $number * 4;
+
+	@return #{ $space }em;
+}</code></pre>
+							</div>
+						</li>
+					</ul>
+
+					<aside class="notes">
+						Moving to Sass we also thrive to make things simpler. Using mixins for everything does seem like a hack. Here too we have an eye on the details
+						and make interacting with us fun.
+					</aside>
+				</section>
+
+				<section data-transition="fade-out">
+					<h2 class="slide-headline slide-headline-smaller">When?</h2>
+
+					<img class="fragment fade-in" src="assets/img/pancake-day.jpg" alt="TODO">
+
+					<aside class="notes">
+						28th of Feb is international pancake day. Naturally also our release day :)
+					</aside>
+				</section>
+			</section>
+
+
+			<!-- *****************************************************************************************************************************************************
+			*  The End
+			****************************************************************************************************************************************************** -->
+			<section id="theend">
+				<h2 class="last">Questions?</h2>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="https://cdn.polyfill.io/v1/polyfill.min.js"></script>
+	<script type="text/javascript" src="assets/js/site.min.js"></script>
+</body>
+</html>

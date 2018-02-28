@@ -9,7 +9,7 @@
 //                                                            ██║    ██║  ██║ ███████╗ ██║  ██╗ ███████║
 //                                                            ╚═╝    ╚═╝  ╚═╝ ╚══════╝ ╚═╝  ╚═╝ ╚══════╝
 //                                                                       Created by Dominik Wilkowski
-// @desc     Talk A11Y
+// @desc     Talk Design systems
 // @author   Dominik Wilkowski
 // @website  https://github.com/dominikwilkowski/talks
 // @issues   https://github.com/dominikwilkowski/talks/issues
