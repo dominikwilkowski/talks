@@ -7,3 +7,5 @@ npm-debug.log
 .idea
 westpac/assets/js/site.min.js
 westpac/assets/css/site.min.css
+
+yarn.lock
